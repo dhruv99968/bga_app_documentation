@@ -352,6 +352,53 @@ pre{background:#0f172a;color:#e2e8f0;padding:16px 18px;border-radius:var(--radiu
 .mb-2{margin-bottom:8px}
 h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 8px}
 
+/* ─── GAME TYPE SECTION BADGE ─── */
+        .gt-section-badge{display:inline-flex;align-items:center;gap:5px;background:var(--brand);color:#fff;font-size:.68rem;font-weight:700;padding:2px 10px;border-radius:99px;margin-left:8px;letter-spacing:.03em;vertical-align:middle}
+
+        /* ─── GAME TYPE CONTEXT BAR ─── */
+        .gt-context-bar{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,#f0fdf4,#ecfdf5);border:1.5px solid #bbf7d0;border-radius:var(--radius);padding:14px 16px;margin-bottom:20px;flex-wrap:wrap}
+        .gt-context-icon{font-size:1.8rem;flex-shrink:0}
+        .gt-context-title{font-size:.9rem;font-weight:700;color:var(--ink);margin-bottom:3px}
+        .gt-context-desc{font-size:.78rem;color:var(--ink-muted);line-height:1.5}
+        .gt-context-switch{margin-left:auto;font-size:.75rem;color:var(--ink-faint);flex-shrink:0}
+        .gt-context-switch a{color:var(--brand);font-weight:600}
+
+        /* ─── PLACEHOLDER PANEL ─── */
+        .gt-placeholder-panel{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px}
+        .gt-ph-icon{font-size:2.5rem;margin-bottom:8px}
+        .gt-ph-title{font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:18px;font-family:var(--font-alt)}
+        .gt-ph-steps{display:flex;flex-direction:column;gap:0}
+        .gt-ph-step{display:flex;gap:14px;padding:12px 0;border-bottom:1px dashed var(--border-soft)}
+        .gt-ph-step:last-child{border-bottom:none}
+        .gt-ph-num{width:28px;height:28px;background:var(--brand);color:#fff;font-size:.72rem;font-weight:700;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+        .gt-ph-step strong{font-size:.9rem;color:var(--ink);display:block;margin-bottom:3px}
+        .gt-ph-step p{font-size:.8rem;color:var(--ink-muted);margin:0;line-height:1.55}
+        .gt-ph-note{margin-top:16px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:var(--radius-sm);padding:10px 14px;font-size:.78rem;color:#166534;display:flex;align-items:flex-start;gap:8px;line-height:1.6}
+
+        /* ─── GT BUTTON DEFAULT BADGE ─── */
+        .gt-btn-default-badge{display:inline-block;background:rgba(255,255,255,.25);color:#fff;font-size:.58rem;font-weight:700;padding:1px 7px;border-radius:99px;letter-spacing:.05em;margin-top:3px;border:1px solid rgba(255,255,255,.3)}
+
+        /* ─── GAME TYPE SELECTOR ─── */
+        .gt-selector-wrap{margin:0 0 20px;border-radius:var(--radius-lg);border:2px dashed var(--brand);padding:18px 20px;background:linear-gradient(135deg,#f0fdf4,#fff)}
+        .gt-selector-label{font-size:.8rem;font-weight:700;color:var(--brand);margin-bottom:12px;display:flex;align-items:center;gap:7px;text-transform:uppercase;letter-spacing:.06em}
+        .gt-selector-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+        .gt-btn{flex:1;min-width:140px;display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:12px 14px;border:2px solid var(--border);border-radius:var(--radius);background:var(--surface);cursor:pointer;font-family:var(--font);transition:all .22s;text-align:left}
+        .gt-btn:hover{border-color:var(--brand);background:var(--blue-soft);transform:translateY(-1px);box-shadow:var(--shadow)}
+        .gt-btn.active{border-color:var(--brand);background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(21,128,61,.3)}
+        .gt-btn-icon{font-size:1.3rem;line-height:1;margin-bottom:2px}
+        .gt-btn-name{font-size:.88rem;font-weight:700;color:var(--ink);line-height:1.2}
+        .gt-btn.active .gt-btn-name{color:#fff}
+        .gt-btn-sub{font-size:.7rem;color:var(--ink-faint);line-height:1.3}
+        .gt-btn.active .gt-btn-sub{color:rgba(255,255,255,.75)}
+        .gt-active-banner{display:flex;align-items:center;gap:8px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:var(--radius-sm);padding:8px 14px;font-size:.8rem;color:var(--green);font-weight:600}
+        .gt-active-banner i{flex-shrink:0}
+        .gt-change-hint{font-weight:400;color:var(--ink-faint);font-size:.75rem}
+        /* highlight the Game Type step tab in stepper */
+        .wstep.gt-step-marker .wstep-circle{border-color:var(--accent)!important}
+        /* dynamic-content flash animation */
+        @keyframes gtFlash{0%{opacity:.3;transform:scale(.98)}100%{opacity:1;transform:scale(1)}}
+        .gt-flash{animation:gtFlash .3s ease-out}
+
 /* ─── WIZARD END DIVIDER ─── */
         .wizard-end-divider{
           margin:0 40px 36px;
@@ -1277,9 +1324,11 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
     <div class="wizard-stepper" id="cgTabs" style="margin-bottom:16px">
 <!--      <div class="wstep active" onclick="cgGoTo(0)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-grid-1x2"></i></span></div><div class="wstep-label">Games Tab</div></div>-->
 <!--      <div class="wstep" onclick="cgGoTo(1)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-plus-square"></i></span></div><div class="wstep-label">Create Game</div></div>-->
-      <div class="wstep" onclick="cgGoTo(0)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-calendar-event"></i></span></div><div class="wstep-label">Event</div></div>
+      <div class="wstep active" onclick="cgGoTo(0)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-calendar-event"></i></span></div><div class="wstep-label">Event</div></div>
       <div class="wstep" onclick="cgGoTo(1)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-table"></i></span></div><div class="wstep-label">Tee Sheet</div></div>
-      <div class="wstep" onclick="cgGoTo(2)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-controller"></i></span></div><div class="wstep-label">Game Type</div></div>
+<!--      <div class="wstep" onclick="cgGoTo(2)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-controller"></i></span></div><div class="wstep-label">Game Type</div></div>-->
+      <div class="wstep gt-step-marker" onclick="cgGoTo(2)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-controller"></i></span></div><div class="wstep-label">Game Type</div></div>
+
       <div class="wstep" onclick="cgGoTo(3)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-sliders"></i></span></div><div class="wstep-label">Match Details</div></div>
       <div class="wstep" onclick="cgGoTo(4)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-calendar-date"></i></span></div><div class="wstep-label">Date &amp; Time</div></div>
       <div class="wstep" onclick="cgGoTo(5)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-flag"></i></span></div><div class="wstep-label">Holes</div></div>
@@ -1292,7 +1341,7 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
     <div class="wizard-slide-panel">
 
       <!-- Slide 0 -->
-      <div class="wizard-slide" id="cgslide-0">
+      <div class="wizard-slide active" id="cgslide-0">
         <div class="wizard-slide-info">
           <div class="wsi-num">01</div>
           <div class="wsi-body">
@@ -1320,7 +1369,8 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
           <div class="wsi-icon"><i class="bi bi-table"></i></div>
         </div>
         <div class="wizard-slide-img"><div class="image-placeholder">
-          <img src="images/selectTeeSheet.png" alt="Create or Select Tee Sheet" class="app-image" />
+<!--          <img src="images/selectTeeSheet.png" alt="Create or Select Tee Sheet" class="app-image" />-->
+          <img src="images/selectNewTeeSheetImg.png" alt="Create or Select Tee Sheet" class="app-image" />
         </div></div>
         <div class="wizard-nav">
           <button class="wizard-nav-btn" onclick="cgGoTo(0)"><i class="bi bi-arrow-left"></i> Back</button>
@@ -1330,17 +1380,102 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
       </div>
       <!-- Slide 2 -->
       <div class="wizard-slide" id="cgslide-2">
-        <div class="wizard-slide-info">
+        <!--<div class="wizard-slide-info">
           <div class="wsi-num">03</div>
           <div class="wsi-body">
             <div class="wsi-title">Set Game Name &amp; Game Type</div>
             <div class="wsi-desc">Enter a <strong>Game Name</strong> and choose the <strong>Game Type</strong> (e.g., Calcutta, Progressive Skins). Tap <strong>Next</strong> to proceed.</div>
           </div>
           <div class="wsi-icon"><i class="bi bi-controller"></i></div>
+        </div>-->
+        <div class="wizard-slide-info" style="border:2px solid var(--brand);background:var(--blue-soft)">
+          <div class="wsi-num" style="color:var(--brand);opacity:.5">03</div>
+          <div class="wsi-body">
+            <div class="wsi-title">Set Game Name &amp; Game Type
+              <span style="display:inline-block;margin-left:8px;background:var(--brand);color:#fff;font-size:.62rem;font-weight:700;padding:2px 9px;border-radius:99px;letter-spacing:.04em;vertical-align:middle">FLOW CHANGES HERE</span>
+            </div>
+            <div class="wsi-desc">
+              Enter a <strong>Game Name</strong> and select the <strong>Game Type</strong>. This is the key step — the game type you choose determines all subsequent screens, available play types, holes, amounts, and scoring rules. Your selection here will also update the <strong>View Game</strong> and <strong>Add Score</strong> sections further below.
+              <div style="margin-top:14px">
+                <!-- ── GLOBAL GAME TYPE SELECTOR ── -->
+                <div class="gt-selector-label" style="margin-bottom:10px"><i class="bi bi-sliders2"></i> Select Game Type — updates entire documentation:</div>
+                <div class="gt-selector-btns" id="gtBtnGroup">
+                  <button class="gt-btn active" onclick="setGameType('321milo',this)">
+                    <span class="gt-btn-icon">🎯</span>
+                    <span class="gt-btn-name">321 Milo</span>
+                    <span class="gt-btn-sub">COD · 2v2 · Random</span>
+                    <span class="gt-btn-default-badge">Default</span>
+                  </button>
+                  <button class="gt-btn" onclick="setGameType('calcutta',this)">
+                    <span class="gt-btn-icon">🏆</span>
+                    <span class="gt-btn-name">Calcutta</span>
+                    <span class="gt-btn-sub">Auction · Team bidding</span>
+                  </button>
+                  <button class="gt-btn" onclick="setGameType('progskins',this)">
+                    <span class="gt-btn-icon">⛳</span>
+                    <span class="gt-btn-name">Progressive Skins</span>
+                    <span class="gt-btn-sub">Hole-by-hole · Carry-over</span>
+                  </button>
+                  <button class="gt-btn" onclick="setGameType('regular_skins',this)">
+                    <span class="gt-btn-icon">💰</span>
+                    <span class="gt-btn-name">Regular Skins</span>
+                    <span class="gt-btn-sub">Skins · No carry-over</span>
+                  </button>
+                  <button class="gt-btn" onclick="setGameType('ryder_cup',this)">
+                    <span class="gt-btn-icon">🏌️</span>
+                    <span class="gt-btn-name">Ryder Cup</span>
+                    <span class="gt-btn-sub">Team match play</span>
+                  </button>
+                  <button class="gt-btn" onclick="setGameType('vegas',this)">
+                    <span class="gt-btn-icon">🎰</span>
+                    <span class="gt-btn-name">Vegas</span>
+                    <span class="gt-btn-sub">Team · Combined score</span>
+                  </button>
+                  <button class="gt-btn" onclick="setGameType('horse_race',this)">
+                    <span class="gt-btn-icon">🐎</span>
+                    <span class="gt-btn-name">Horse Race</span>
+                    <span class="gt-btn-sub">Elimination format</span>
+                  </button>
+                  <button class="gt-btn" onclick="setGameType('wolf',this)">
+                    <span class="gt-btn-icon">🐺</span>
+                    <span class="gt-btn-name">Wolf</span>
+                    <span class="gt-btn-sub">Rotating partners</span>
+                  </button>
+                  <button class="gt-btn" onclick="setGameType('scramble',this)">
+                    <span class="gt-btn-icon">🤝</span>
+                    <span class="gt-btn-name">Scramble</span>
+                    <span class="gt-btn-sub">Best-ball team</span>
+                  </button>
+                  <button class="gt-btn" onclick="setGameType('stableford',this)">
+                    <span class="gt-btn-icon">📊</span>
+                    <span class="gt-btn-name">Stableford</span>
+                    <span class="gt-btn-sub">Points per hole</span>
+                  </button>
+                  <button class="gt-btn" onclick="setGameType('stroke_play',this)">
+                    <span class="gt-btn-icon">🔢</span>
+                    <span class="gt-btn-name">Stroke Play</span>
+                    <span class="gt-btn-sub">Total strokes</span>
+                  </button>
+                  <button class="gt-btn" onclick="setGameType('medal_play',this)">
+                    <span class="gt-btn-icon">🥇</span>
+                    <span class="gt-btn-name">Medal Play</span>
+                    <span class="gt-btn-sub">Gross / Net total</span>
+                  </button>
+                </div>
+                <div class="gt-active-banner" id="gtActiveBanner" style="margin-top:10px">
+                  <i class="bi bi-info-circle"></i>
+                  Showing flow for: <strong id="gtActiveName">321 Milo</strong>
+                  <span class="gt-change-hint">— steps below &amp; View Game &amp; Add Score all update when you switch</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wsi-icon" style="color:var(--brand)"><i class="bi bi-controller"></i></div>
         </div>
         <div class="wizard-slide-img"><div class="image-placeholder">
 <!--          <img src="images/setGameNameAndGameType.png" alt="Set Game Name &amp; Game Type" class="app-image" />-->
-          <img src="images/321MiloCreateGame.png" alt="Set Game Name &amp; Game Type" class="app-image" />
+<!--          <img src="images/321MiloCreateGame.png" alt="Set Game Name &amp; Game Type" class="app-image" />-->
+          <img id="createGameImg" src="${currentGameCreateImage}" alt="Set Game Name &amp; Game Type" class="app-image" />
         </div></div>
         <div class="wizard-nav">
           <button class="wizard-nav-btn" onclick="cgGoTo(1)"><i class="bi bi-arrow-left"></i> Back</button>
@@ -1374,21 +1509,36 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
                     <span style="font-size:.88rem;font-weight:700;color:var(--ink)">Play Type</span>
                   </div>
                   <p style="font-size:.8rem;color:var(--ink-muted);line-height:1.6;margin:0 0 8px">Select the play format. Available play types <strong>depend on the selected game type</strong> and will vary accordingly.</p>
-                  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px">
+                  <div id="cgPlayTypeBadges" style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px">
                     <span style="background:#dcfce7;color:#15803d;font-size:.68rem;font-weight:700;padding:3px 9px;border-radius:4px">COD ✓</span>
                     <span style="background:#f1f5f2;color:var(--ink-muted);font-size:.68rem;font-weight:600;padding:3px 9px;border-radius:4px">2v2</span>
                     <span style="background:#f1f5f2;color:var(--ink-muted);font-size:.68rem;font-weight:600;padding:3px 9px;border-radius:4px">Random</span>
-                    <span style="background:#f1f5f2;color:var(--ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.5">4v4</span>
-                    <span style="background:#f1f5f2;color:var(--ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.5">Cards</span>
-                    <span style="background:#f1f5f2;color:var(--ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.5">Ultra Vegas</span>
-                    <span style="background:#f1f5f2;color:var(--ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.5">1v1</span>
-                    <span style="background:#f1f5f2;color:var(--ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.5">Individual</span>
-                    <span style="background:#f1f5f2;color:var(--ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.5">Modified Stableford</span>
+                    <span style="background:#f1f5f2;color:var(--ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.45">4v4</span>
+                    <span style="background:#f1f5f2;color:var(--ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.45">Cards</span>
+                    <span style="background:#f1f5f2;color:var(--ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.45">Ultra Vegas</span>
+                    <span style="background:#f1f5f2;color:var(--ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.45">1v1</span>
+                    <span style="background:#f1f5f2;color:var(--ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.45">Individual</span>
+                    <span style="background:#f1f5f2;color:var(--ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.45">Modified Stableford</span>
+                  </div>
+                  <div id="cgPlayTypeNote" style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:6px;padding:8px 10px;font-size:.75rem;color:#1e40af;line-height:1.5">
+                    <strong>321 Milo</strong> — available play types: <strong>COD</strong>, <strong>2v2</strong>, <strong>Random</strong>. Currently selected: <strong>COD</strong>.
+                    <br/><span style="font-size:.7rem;opacity:.8">Greyed-out options are not available for this game type.</span>
+                  </div>
+                  <!--<div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px">
+                    <span style="background:#dcfce7;color:#15803d;font-size:.68rem;font-weight:700;padding:3px 9px;border-radius:4px">COD ✓</span>
+                    <span style="background:#f1f5f2;color:var(&#45;&#45;ink-muted);font-size:.68rem;font-weight:600;padding:3px 9px;border-radius:4px">2v2</span>
+                    <span style="background:#f1f5f2;color:var(&#45;&#45;ink-muted);font-size:.68rem;font-weight:600;padding:3px 9px;border-radius:4px">Random</span>
+                    <span style="background:#f1f5f2;color:var(&#45;&#45;ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.5">4v4</span>
+                    <span style="background:#f1f5f2;color:var(&#45;&#45;ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.5">Cards</span>
+                    <span style="background:#f1f5f2;color:var(&#45;&#45;ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.5">Ultra Vegas</span>
+                    <span style="background:#f1f5f2;color:var(&#45;&#45;ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.5">1v1</span>
+                    <span style="background:#f1f5f2;color:var(&#45;&#45;ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.5">Individual</span>
+                    <span style="background:#f1f5f2;color:var(&#45;&#45;ink-faint);font-size:.68rem;font-weight:500;padding:3px 9px;border-radius:4px;opacity:.5">Modified Stableford</span>
                   </div>
                   <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:6px;padding:8px 10px;font-size:.75rem;color:#1e40af;line-height:1.5">
                     <strong>321 Milo game</strong> — available play types: <strong>COD</strong>, <strong>2v2</strong>, <strong>Random</strong>. Currently selected: <strong>COD</strong>.
                     <br/><span style="font-size:.7rem;color:#3b82f6;opacity:.8">Greyed-out options above are not available for this game type.</span>
-                  </div>
+                  </div>-->
                 </div>
 
               </div>
@@ -1398,7 +1548,7 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
         </div>
         <div class="wizard-slide-img"><div class="image-placeholder">
 <!--          <img src="images/setMatchDetails.png" alt="Set Match Details" class="app-image" />-->
-          <img src="images/321MiloSetMatchDetails.png" alt="Set Match Details" class="app-image" />
+          <img id="setMatchDetailsImg" src="${setMatchDetailsImage}" alt="Set Match Details" class="app-image" />
         </div></div>
         <div class="wizard-nav">
           <button class="wizard-nav-btn" onclick="cgGoTo(2)"><i class="bi bi-arrow-left"></i> Back</button>
@@ -1435,36 +1585,36 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
             <div class="wsi-desc">
               Define how many holes will be played per match. The course is divided into three sections — you can select which section to play, and the default is already pre-selected.
 
-              <div style="display:flex;flex-direction:column;gap:10px;margin-top:12px">
+              <div style="display:flex;flex-direction:column;gap:10px;margin-top:12px" id="cg-desc-5">
 
-                <!-- Holes per match -->
-                <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px">
+                <!-- Holes per match for 321 Milo -->
+                <!--<div style="background:var(&#45;&#45;bg);border:1px solid var(&#45;&#45;border);border-radius:8px;padding:12px 14px">
                   <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-                    <span style="background:var(--brand);color:#fff;font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase">Required</span>
-                    <span style="font-size:.88rem;font-weight:700;color:var(--ink)">Holes per Match</span>
+                    <span style="background:var(&#45;&#45;brand);color:#fff;font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase">Required</span>
+                    <span style="font-size:.88rem;font-weight:700;color:var(&#45;&#45;ink)">Holes per Match</span>
                   </div>
                   <div style="display:flex;gap:8px;flex-wrap:wrap">
-                    <div style="flex:1;min-width:80px;background:#f1f5f2;border:1.5px solid var(--border);border-radius:7px;padding:9px 10px;text-align:center">
+                    <div style="flex:1;min-width:80px;background:#f1f5f2;border:1.5px solid var(&#45;&#45;border);border-radius:7px;padding:9px 10px;text-align:center">
 
-                      <div style="font-size:.75rem;font-weight:800;color:var(--ink-muted)">Front 9</div>
-                      <div style="font-size:.68rem;color:var(--ink-faint);margin-top:2px">Holes 1–9</div>
+                      <div style="font-size:.75rem;font-weight:800;color:var(&#45;&#45;ink-muted)">Front 9</div>
+                      <div style="font-size:.68rem;color:var(&#45;&#45;ink-faint);margin-top:2px">Holes 1–9</div>
                     </div>
-                    <div style="flex:1;min-width:80px;background:#f1f5f2;border:1.5px solid var(--border);border-radius:7px;padding:9px 10px;text-align:center">
-                      <div style="font-size:.75rem;font-weight:800;color:var(--ink-muted)">Back 9</div>
-                      <div style="font-size:.68rem;color:var(--ink-faint);margin-top:2px">Holes 10–18</div>
+                    <div style="flex:1;min-width:80px;background:#f1f5f2;border:1.5px solid var(&#45;&#45;border);border-radius:7px;padding:9px 10px;text-align:center">
+                      <div style="font-size:.75rem;font-weight:800;color:var(&#45;&#45;ink-muted)">Back 9</div>
+                      <div style="font-size:.68rem;color:var(&#45;&#45;ink-faint);margin-top:2px">Holes 10–18</div>
                     </div>
                     <div style="flex:1;min-width:80px;background:#dcfce7;border:1.5px solid #15803d;border-radius:7px;padding:9px 10px;text-align:center">
                       <div style="font-size:.75rem;font-weight:800;color:#15803d">Total 18</div>
                       <div style="font-size:.68rem;color:#166534;margin-top:2px">All Holes</div>
                     </div>
                   </div>
-                  <p style="font-size:.74rem;color:var(--ink-faint);margin-top:7px;line-height:1.5">The default selection is <strong>Front 18</strong>. You can change this if needed before proceeding.</p>
+                  <p style="font-size:.74rem;color:var(&#45;&#45;ink-faint);margin-top:7px;line-height:1.5">The default selection is <strong>Front 18</strong>. You can change this if needed before proceeding.</p>
 
-                  <p style="font-size:.8rem;color:var(--ink-muted);line-height:1.6;margin:0 0 8px">Select how many holes are played per match. Two options are available:</p>
+                  <p style="font-size:.8rem;color:var(&#45;&#45;ink-muted);line-height:1.6;margin:0 0 8px">Select how many holes are played per match. Two options are available:</p>
                   <div style="display:flex;gap:8px">
-                    <div style="flex:1;background:#f1f5f2;border:1.5px solid var(--border);border-radius:7px;padding:10px 12px;text-align:center">
-                      <div style="font-size:.85rem;font-weight:800;color:var(--ink-muted)">3 Holes</div>
-                      <div style="font-size:.68rem;color:var(--ink-faint);margin-top:2px">Per Match</div>
+                    <div style="flex:1;background:#f1f5f2;border:1.5px solid var(&#45;&#45;border);border-radius:7px;padding:10px 12px;text-align:center">
+                      <div style="font-size:.85rem;font-weight:800;color:var(&#45;&#45;ink-muted)">3 Holes</div>
+                      <div style="font-size:.68rem;color:var(&#45;&#45;ink-faint);margin-top:2px">Per Match</div>
                     </div>
                     <div style="flex:1;background:#dcfce7;border:1.5px solid #15803d;border-radius:7px;padding:10px 12px;text-align:center;position:relative">
                       <div style="font-size:.85rem;font-weight:800;color:#15803d">6 Holes</div>
@@ -1472,7 +1622,7 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
                       <span style="position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:#15803d;color:#fff;font-size:.58rem;font-weight:700;padding:1px 7px;border-radius:100px;white-space:nowrap;letter-spacing:.04em">DEFAULT</span>
                     </div>
                   </div>
-                </div>
+                </div>-->
 
               </div>
             </div>
@@ -1481,7 +1631,7 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
         </div>
         <div class="wizard-slide-img"><div class="image-placeholder">
 <!--          <img src="images/setPerMatchHoles.png" alt="Set Per Match Holes" class="app-image" />-->
-          <img src="images/321MiloSetPerMatchHoles.png" alt="Set Per Match Holes" class="app-image" />
+          <img id = "setPerMatchHolesImg" src="${setPerMatchHolesImage}" alt="Set Per Match Holes" class="app-image" />
         </div></div>
         <div class="wizard-nav">
           <button class="wizard-nav-btn" onclick="cgGoTo(4)"><i class="bi bi-arrow-left"></i> Back</button>
@@ -1499,54 +1649,55 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
             <div class="wsi-desc">
               Set the dollar values for each betting pool. Default amounts are pre-filled — you can keep them or adjust as needed. All values feed automatically into the Ledger and bet calculations.
 
-              <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
+              <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px" id="cg-desc-6" >
 
-                <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px">
+                //set amount for each -> 321 milo
+                <!--<div style="background:var(&#45;&#45;bg);border:1px solid var(&#45;&#45;border);border-radius:8px;padding:12px 14px">
                   <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
                     <div>
                       <div style="display:flex;align-items:center;gap:7px;margin-bottom:4px">
-                        <i class="bi bi-cash-coin" style="color:var(--brand);font-size:.9rem"></i>
-                        <span style="font-size:.88rem;font-weight:700;color:var(--ink)">Bet per Match</span>
-                        <span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px;letter-spacing:.04em">DEFAULT</span>
+                        <i class="bi bi-cash-coin" style="color:var(&#45;&#45;brand);font-size:.9rem"></i>
+                        <span style="font-size:.88rem;font-weight:700;color:var(&#45;&#45;ink)">Bet per Match</span>
+                        <span style="background:var(&#45;&#45;brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px;letter-spacing:.04em">DEFAULT</span>
                       </div>
-                      <p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">The wager amount applied to each match played. A default value is pre-filled — update if needed.</p>
+                      <p style="font-size:.78rem;color:var(&#45;&#45;ink-muted);line-height:1.5;margin:0">The wager amount applied to each match played. A default value is pre-filled — update if needed.</p>
                     </div>
                     <div style="background:#dcfce7;border:1.5px solid #15803d;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0">
-                      <div style="font-size:1.1rem;font-weight:800;color:#15803d;font-family:var(--font-alt)">$3.00</div>
+                      <div style="font-size:1.1rem;font-weight:800;color:#15803d;font-family:var(&#45;&#45;font-alt)">$3.00</div>
                       <div style="font-size:.6rem;color:#166534;font-weight:600;letter-spacing:.04em;text-transform:uppercase">per match</div>
                     </div>
                   </div>
                 </div>
 
-                <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px">
+                <div style="background:var(&#45;&#45;bg);border:1px solid var(&#45;&#45;border);border-radius:8px;padding:12px 14px">
                   <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
                     <div>
                       <div style="display:flex;align-items:center;gap:7px;margin-bottom:4px">
-                        <i class="bi bi-stars" style="color:var(--accent);font-size:.9rem"></i>
-                        <span style="font-size:.88rem;font-weight:700;color:var(--ink)">Skode Pool</span>
-                        <span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px;letter-spacing:.04em">DEFAULT</span>
+                        <i class="bi bi-stars" style="color:var(&#45;&#45;accent);font-size:.9rem"></i>
+                        <span style="font-size:.88rem;font-weight:700;color:var(&#45;&#45;ink)">Skode Pool</span>
+                        <span style="background:var(&#45;&#45;brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px;letter-spacing:.04em">DEFAULT</span>
                       </div>
-                      <p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">The total pool contributed for Skode side rewards. Pre-filled by default — change if required.</p>
+                      <p style="font-size:.78rem;color:var(&#45;&#45;ink-muted);line-height:1.5;margin:0">The total pool contributed for Skode side rewards. Pre-filled by default — change if required.</p>
                     </div>
-                    <div style="background:#fef3e2;border:1.5px solid var(--accent);border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0">
-                      <div style="font-size:1.1rem;font-weight:800;color:var(--accent);font-family:var(--font-alt)">$5.00</div>
-                      <div style="font-size:.6rem;color:var(--accent);font-weight:600;letter-spacing:.04em;text-transform:uppercase">pool total</div>
+                    <div style="background:#fef3e2;border:1.5px solid var(&#45;&#45;accent);border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0">
+                      <div style="font-size:1.1rem;font-weight:800;color:var(&#45;&#45;accent);font-family:var(&#45;&#45;font-alt)">$5.00</div>
+                      <div style="font-size:.6rem;color:var(&#45;&#45;accent);font-weight:600;letter-spacing:.04em;text-transform:uppercase">pool total</div>
                     </div>
                   </div>
                 </div>
 
-                <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px">
+                <div style="background:var(&#45;&#45;bg);border:1px solid var(&#45;&#45;border);border-radius:8px;padding:12px 14px">
                   <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
                     <div>
                       <div style="display:flex;align-items:center;gap:7px;margin-bottom:4px">
                         <i class="bi bi-trophy" style="color:#7c3aed;font-size:.9rem"></i>
-                        <span style="font-size:.88rem;font-weight:700;color:var(--ink)">Junk Pool</span>
-                        <span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px;letter-spacing:.04em">DEFAULT</span>
+                        <span style="font-size:.88rem;font-weight:700;color:var(&#45;&#45;ink)">Junk Pool</span>
+                        <span style="background:var(&#45;&#45;brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px;letter-spacing:.04em">DEFAULT</span>
                       </div>
-                      <p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">The total pool contributed for Junk side rewards. Pre-filled by default — change if required.</p>
+                      <p style="font-size:.78rem;color:var(&#45;&#45;ink-muted);line-height:1.5;margin:0">The total pool contributed for Junk side rewards. Pre-filled by default — change if required.</p>
                     </div>
                     <div style="background:#ede9fe;border:1.5px solid #7c3aed;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0">
-                      <div style="font-size:1.1rem;font-weight:800;color:#7c3aed;font-family:var(--font-alt)">$2.00</div>
+                      <div style="font-size:1.1rem;font-weight:800;color:#7c3aed;font-family:var(&#45;&#45;font-alt)">$2.00</div>
                       <div style="font-size:.6rem;color:#7c3aed;font-weight:600;letter-spacing:.04em;text-transform:uppercase">pool total</div>
                     </div>
                   </div>
@@ -1555,7 +1706,7 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
                 <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:7px;padding:8px 12px;font-size:.75rem;color:#1e40af;line-height:1.55">
                   <i class="bi bi-info-circle" style="margin-right:5px"></i>
                   All three values are <strong>pre-filled with default amounts</strong>. You can tap any field to edit the value before proceeding.
-                </div>
+                </div>-->
 
               </div>
             </div>
@@ -1564,7 +1715,7 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
         </div>
         <div class="wizard-slide-img"><div class="image-placeholder">
 <!--          <img src="images/setAmountforEach.png" alt="Set Amount for Each" class="app-image" />-->
-          <img src="images/321MiloSetAmountforEach.png" alt="Set Amount for Each" class="app-image" />
+          <img id="setAmountforEachImg" src="${setAmountforEachImage" alt="Set Amount for Each" class="app-image" />
         </div></div>
         <div class="wizard-nav">
           <button class="wizard-nav-btn" onclick="cgGoTo(5)"><i class="bi bi-arrow-left"></i> Back</button>
@@ -1580,40 +1731,42 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
             <div class="wsi-title">Set Points</div>
 <!--            <div class="wsi-desc">Configure the <strong>points system</strong> — set point values for wins, ties, birdies, eagles, or any format-specific scoring events.</div>-->
             <div class="wsi-desc">
-              Configure the points awarded for winning. Both fields are <strong>pre-filled with default values</strong> — tap any field to change the value if needed.
+<!--              Configure the points awarded for winning. Both fields are <strong>pre-filled with default values</strong> — tap any field to change the value if needed.-->
+              Configure the points awarded for winning. The field(s) are <strong>pre-filled with default value(s)</strong>.
 
-              <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
+              <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px" id="cg-desc-7">
 
-                <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px">
+                <!-- For 321 milo -->
+                <!--<div style="background:var(&#45;&#45;bg);border:1px solid var(&#45;&#45;border);border-radius:8px;padding:12px 14px">
                   <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
                     <div>
                       <div style="display:flex;align-items:center;gap:7px;margin-bottom:4px">
-                        <i class="bi bi-flag-fill" style="color:var(--brand);font-size:.9rem"></i>
-                        <span style="font-size:.88rem;font-weight:700;color:var(--ink)">Point per Hole Win</span>
-                        <span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px;letter-spacing:.04em">Required</span>
+                        <i class="bi bi-flag-fill" style="color:var(&#45;&#45;brand);font-size:.9rem"></i>
+                        <span style="font-size:.88rem;font-weight:700;color:var(&#45;&#45;ink)">Point per Hole Win</span>
+                        <span style="background:var(&#45;&#45;brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px;letter-spacing:.04em">Required</span>
                       </div>
-                      <p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Points awarded to a player or team for <strong>winning a single hole</strong>. Pre-filled — edit if needed.</p>
+                      <p style="font-size:.78rem;color:var(&#45;&#45;ink-muted);line-height:1.5;margin:0">Points awarded to a player or team for <strong>winning a single hole</strong>. Pre-filled — edit if needed.</p>
                     </div>
                     <div style="background:#dcfce7;border:1.5px solid #15803d;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0">
-                      <div style="font-size:1.2rem;font-weight:800;color:#15803d;font-family:var(--font-alt)">1</div>
+                      <div style="font-size:1.2rem;font-weight:800;color:#15803d;font-family:var(&#45;&#45;font-alt)">1</div>
                       <div style="font-size:.6rem;color:#166534;font-weight:600;letter-spacing:.04em;text-transform:uppercase">pt / hole</div>
                     </div>
                   </div>
                 </div>
 
-                <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px">
+                <div style="background:var(&#45;&#45;bg);border:1px solid var(&#45;&#45;border);border-radius:8px;padding:12px 14px">
                   <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
                     <div>
                       <div style="display:flex;align-items:center;gap:7px;margin-bottom:4px">
-                        <i class="bi bi-trophy-fill" style="color:var(--accent);font-size:.9rem"></i>
-                        <span style="font-size:.88rem;font-weight:700;color:var(--ink)">Point per Match Win</span>
-                        <span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px;letter-spacing:.04em">Required</span>
+                        <i class="bi bi-trophy-fill" style="color:var(&#45;&#45;accent);font-size:.9rem"></i>
+                        <span style="font-size:.88rem;font-weight:700;color:var(&#45;&#45;ink)">Point per Match Win</span>
+                        <span style="background:var(&#45;&#45;brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px;letter-spacing:.04em">Required</span>
                       </div>
-                      <p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Points awarded to a player or team for <strong>winning an entire match</strong>. Pre-filled — edit if needed.</p>
+                      <p style="font-size:.78rem;color:var(&#45;&#45;ink-muted);line-height:1.5;margin:0">Points awarded to a player or team for <strong>winning an entire match</strong>. Pre-filled — edit if needed.</p>
                     </div>
-                    <div style="background:#fef3e2;border:1.5px solid var(--accent);border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0">
-                      <div style="font-size:1.2rem;font-weight:800;color:var(--accent);font-family:var(--font-alt)">0</div>
-                      <div style="font-size:.6rem;color:var(--accent);font-weight:600;letter-spacing:.04em;text-transform:uppercase">pt / match</div>
+                    <div style="background:#fef3e2;border:1.5px solid var(&#45;&#45;accent);border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0">
+                      <div style="font-size:1.2rem;font-weight:800;color:var(&#45;&#45;accent);font-family:var(&#45;&#45;font-alt)">0</div>
+                      <div style="font-size:.6rem;color:var(&#45;&#45;accent);font-weight:600;letter-spacing:.04em;text-transform:uppercase">pt / match</div>
                     </div>
                   </div>
                 </div>
@@ -1621,7 +1774,7 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
                 <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:7px;padding:8px 12px;font-size:.75rem;color:#1e40af;line-height:1.55">
                   <i class="bi bi-info-circle" style="margin-right:5px"></i>
                   Both fields are <strong>pre-filled with default point values</strong>. Tap any field to update before proceeding.
-                </div>
+                </div>-->
 
               </div>
             </div>
@@ -1630,7 +1783,7 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
         </div>
         <div class="wizard-slide-img"><div class="image-placeholder">
 <!--          <img src="images/setPoints.png" alt="Set Points" class="app-image" />-->
-          <img src="images/321MiloSetPoints.png" alt="Set Points" class="app-image" />
+          <img id="setPointsImg" src="images/321MiloSetPoints.png" alt="Set Points" class="app-image" />
         </div></div>
         <div class="wizard-nav">
           <button class="wizard-nav-btn" onclick="cgGoTo(6)"><i class="bi bi-arrow-left"></i> Back</button>
@@ -1663,18 +1816,29 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
           <div class="wsi-num">10</div>
           <div class="wsi-body">
             <div class="wsi-title">Game Created Successfully</div>
-            <div class="wsi-desc">A confirmation screen appears indicating the game has been created. You now have three options: <strong>Add Across Foursome Team</strong>, <strong>View Game</strong>, or <strong>Create Game for Another Day</strong>.</div>
+            <div class="wsi-desc" id="cg-desc-9">
+                <!-- gameCreatedTitle -->
+                <!-- A confirmation screen appears indicating the game has been created. You now have three options: <strong>Add Across Foursome Team</strong>, <strong>View Game</strong>, or <strong>Create Game for Another Day</strong>.-->
+            </div>
           </div>
           <div class="wsi-icon"><i class="bi bi-check-circle"></i></div>
         </div>
         <div class="wizard-slide-img"><div class="image-placeholder">
 <!--          <img src="images/gameCreatedSuccessfully.png" alt="Game Created Successfully" class="app-image" />-->
-          <img src="images/321MiloGameCreatedSuccessfully.png" alt="Game Created Successfully" class="app-image" />
+          <img id="gameCreatedSuccessImg" src="${gameCreatedSuccessImage}" alt="Game Created Successfully" class="app-image" />
         </div></div>
         <div class="wizard-nav">
           <button class="wizard-nav-btn" onclick="cgGoTo(8)"><i class="bi bi-arrow-left"></i> Back</button>
           <div class="wizard-progress-dots" id="cgdots-9"></div>
           <span style="font-size:.8rem;color:var(--ink-faint)">&#10003; Game Setup Complete!</span>
+        </div>
+        <div class="success-message"><i class="bi bi-check-circle-fill"></i><span>Game created successfully!</span></div>
+        <div id="cg-desc-9.1" >
+          <!-- 321 milo and Progressive skin -->
+          <!--<h4 class="card-heading">After Game Creation — 3 Options</h4>
+          <div class="action-card"><div class="action-icon"><i class="bi bi-people-fill"></i></div><div><div class="action-title">1. Add Across Foursome Team</div><div class="action-desc">Create or select Across Foursome Teams for the game. Teams are formed based on the selected tee sheet. Use existing teams or create new ones.</div></div></div>
+          <div class="action-card"><div class="action-icon"><i class="bi bi-eye"></i></div><div><div class="action-title">2. View Game</div><div class="action-desc">Opens the Game Details screen with access to Overview, Results, Ledger, Add Score, and Add Bets tabs.</div></div></div>
+          <div class="action-card"><div class="action-icon"><i class="bi bi-calendar-plus"></i></div><div><div class="action-title">3. Create Game for Another Day</div><div class="action-desc">Create another game within the same event using the same tee sheet or a new one.</div></div></div>-->
         </div>
       </div>
     </div>
@@ -1689,12 +1853,8 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
       <div class="step-item"><div class="step-number">8</div><div class="step-content"><h4>Set Points</h4><p>Configure the scoring and points system.</p></div></div>
       <div class="step-item"><div class="step-number">9</div><div class="step-content"><h4>Choose Game Thumbnail</h4><p>Select or upload a thumbnail image. Tap <strong>Save Game</strong> to complete.</p></div></div>
     </div>-->
-    <div class="success-message"><i class="bi bi-check-circle-fill"></i><span>Game created successfully!</span></div>
-    <h4 class="card-heading">After Game Creation — 3 Options</h4>
-    <div class="action-card"><div class="action-icon"><i class="bi bi-people-fill"></i></div><div><div class="action-title">1. Add Across Foursome Team</div><div class="action-desc">Create or select Across Foursome Teams for the game. Teams are formed based on the selected tee sheet. Use existing teams or create new ones.</div></div></div>
-    <div class="action-card"><div class="action-icon"><i class="bi bi-eye"></i></div><div><div class="action-title">2. View Game</div><div class="action-desc">Opens the Game Details screen with access to Overview, Results, Ledger, Add Score, and Add Bets tabs.</div></div></div>
-    <div class="action-card"><div class="action-icon"><i class="bi bi-calendar-plus"></i></div><div><div class="action-title">3. Create Game for Another Day</div><div class="action-desc">Create another game within the same event using the same tee sheet or a new one.</div></div></div>
-  </div>
+
+     </div>
 </section>
 
 <!-- ===== VIEW GAME ===== -->
@@ -1721,7 +1881,7 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
     </div>
       <div class="wizard-slide-img"><div class="image-placeholder">
 <!--        <img src="images/gameOverview.png" alt="Game Overview Screen" class="app-image" />-->
-        <img src="images/321MiloGameOverview.png" alt="Game Overview Screen" class="app-image" />
+        <img id="gameOverviewImg" src="${gameOverviewImage}" alt="Game Overview Screen" class="app-image" />
       </div></div>
     </div>
   </div>
@@ -1739,14 +1899,14 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
     <div class="steps-container">
       <div class="step-item"><div class="step-number" style="background:#16a34a">1</div><div class="step-content"><h4>Bet Type</h4><p>Select the type: <strong>Win/Lose</strong> or <strong>Over/Under</strong>.</p></div></div>
       <div class="step-item"><div class="step-number" style="background:#16a34a">2</div><div class="step-content"><h4>Betting On</h4><p>Choose what you're betting on: On Skode, On Junk, On Hole, On Game, etc.</p></div></div>
-      <div class="step-item"><div class="step-number" style="background:#16a34a">3</div><div class="step-content"><h4>Players / Teams</h4><p>Choose the participants for this bet.</p></div></div>
+      <div class="step-item"><div class="step-number" style="background:#16a34a">3</div><div class="step-content"><h4>Players / Teams</h4><p>Select the player or team you are betting on.</p></div></div>
       <div class="step-item"><div class="step-number" style="background:#16a34a">4</div><div class="step-content"><h4>Outcome</h4><p>Set the condition: Win/Lose or Over/Under.</p></div></div>
-      <div class="step-item"><div class="step-number" style="background:#16a34a">5</div><div class="step-content"><h4>Amount</h4><p>Enter the bet amount (if applicable), then tap <strong>Save</strong>.</p></div></div>
+      <div class="step-item"><div class="step-number" style="background:#16a34a">5</div><div class="step-content"><h4>Amount</h4><p>Enter the bet amount, then tap <strong>Save</strong>.</p></div></div>
     </div>
     <div class="success-message"><i class="bi bi-check-circle-fill"></i><span>Bet added to the game successfully!</span></div>
     <div class="wizard-slide-img"><div class="image-placeholder">
 <!--      <img src="images/addBetsScreen.png" alt="Add Bets Screen" class="app-image" />-->
-      <img src="images/321MiloAddBetsScreen.png" alt="Add Bets Screen" class="app-image" />
+      <img id="addBetsScreenImg" src="${addBetsScreenImage}" alt="Add Bets Screen" class="app-image" />
     </div></div>
   </div>
 </section>
@@ -1755,14 +1915,15 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
   <section class="doc-section" id="add-score">
     <div class="section-header">
       <div class="section-icon"><i class="bi bi-clipboard2-check"></i></div>
-      <div><h2>G. Add Score</h2><p class="section-subtitle">Enter player scores across the 18-hole grid — 12 steps.</p></div>
+      <div><h2>G. Add Score</h2><p class="section-subtitle" id="addScoreTitle1">Enter player scores across the 18-hole grid — 12 steps.</p></div>
     </div>
     <div class="content-card">
 
       <div class="wizard-intro-banner" style="margin-bottom:18px">
         <div class="wizard-badge">⛳</div>
-        <div class="wizard-intro-text">
-          <h3>Score Entry Flow — 12 Steps</h3>
+        <div class="wizard-intro-text" >
+          <!-- steps total change -->
+          <h3 id="addScoreTitle2">Score Entry Flow — 12 Steps</h3>
           <p>Tap <strong>Add Score</strong> from the Game Overview Tab to begin. Click any step tab to jump to it, or use the <strong>Next / Back</strong> arrows.</p>
         </div>
       </div>
@@ -1782,7 +1943,7 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
         <div class="wstep" onclick="asGoTo(6)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-check2-all"></i></span></div><div class="wstep-label">Leaderboard</div></div>
         <div class="wstep" onclick="asGoTo(7)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-bar-chart-line"></i></span></div><div class="wstep-label">Results</div></div>
         <div class="wstep" onclick="asGoTo(8)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-trophy"></i></span></div><div class="wstep-label">All Holes Done</div></div>
-      </div> -->>
+      </div> -->
      <!-- <div class="wizard-slide-panel">
         &lt;!&ndash; Slide 0 &ndash;&gt;
         <div class="wizard-slide active" id="asslide-0">
@@ -2101,401 +2262,423 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
       </div>-->
 
       <!--321 Milo Cod 6 Holes Matches-->
-    <div class="wizard-stepper" id="asTabs" style="margin-bottom:16px">
-      <div class="wstep active" onclick="asGoTo(0)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-people"></i></span></div><div class="wstep-label">Select Foursome</div></div>
-      <div class="wstep" onclick="asGoTo(1)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-shuffle"></i></span></div><div class="wstep-label">Generate Matches</div></div>
-      <div class="wstep" onclick="asGoTo(2)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-diagram-2"></i></span></div><div class="wstep-label">Match Config</div></div>
-      <div class="wstep" onclick="asGoTo(3)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-gear"></i></span></div><div class="wstep-label">Foursome Setting</div></div>
-      <div class="wstep" onclick="asGoTo(4)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-sliders"></i></span></div><div class="wstep-label">Foursome Settings</div></div>
-      <div class="wstep" onclick="asGoTo(5)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-clipboard2-plus"></i></span></div><div class="wstep-label">Add Score</div></div>
-      <div class="wstep" onclick="asGoTo(6)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-grid-3x3"></i></span></div><div class="wstep-label">Holes Grid</div></div>
-      <div class="wstep" onclick="asGoTo(7)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-pencil-square"></i></span></div><div class="wstep-label">Scorecard</div></div>
-      <div class="wstep" onclick="asGoTo(8)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-stars"></i></span></div><div class="wstep-label">Skode &amp; Junk</div></div>
-      <div class="wstep" onclick="asGoTo(9)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-check2-all"></i></span></div><div class="wstep-label">Leaderboard</div></div>
-      <div class="wstep" onclick="asGoTo(10)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-bar-chart-line"></i></span></div><div class="wstep-label">Results</div></div>
-      <div class="wstep" onclick="asGoTo(11)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-trophy"></i></span></div><div class="wstep-label">All Holes Done</div></div>
-    </div>
+      <div id="gameTypeViseSteps">
+        <div class="wizard-stepper" id="asTabs" style="margin-bottom:16px">
+          <div class="wstep active" onclick="asGoTo(0)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-people"></i></span></div><div class="wstep-label">Select Foursome</div></div>
+          <div class="wstep" onclick="asGoTo(1)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-shuffle"></i></span></div><div class="wstep-label">Generate Matches</div></div>
+          <div class="wstep" onclick="asGoTo(2)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-diagram-2"></i></span></div><div class="wstep-label">Match Config</div></div>
+          <div class="wstep" onclick="asGoTo(3)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-gear"></i></span></div><div class="wstep-label">Foursome Setting</div></div>
+          <div class="wstep" onclick="asGoTo(4)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-sliders"></i></span></div><div class="wstep-label">Foursome Settings</div></div>
+          <div class="wstep" onclick="asGoTo(5)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-clipboard2-plus"></i></span></div><div class="wstep-label">Add Score</div></div>
+          <div class="wstep" onclick="asGoTo(6)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-grid-3x3"></i></span></div><div class="wstep-label">Holes Grid</div></div>
+          <div class="wstep" onclick="asGoTo(7)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-pencil-square"></i></span></div><div class="wstep-label">Scorecard</div></div>
+          <div class="wstep" onclick="asGoTo(8)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-stars"></i></span></div><div class="wstep-label">Skode &amp; Junk</div></div>
+          <div class="wstep" onclick="asGoTo(9)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-check2-all"></i></span></div><div class="wstep-label">Leaderboard</div></div>
+          <div class="wstep" onclick="asGoTo(10)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-bar-chart-line"></i></span></div><div class="wstep-label">Results</div></div>
+          <div class="wstep" onclick="asGoTo(11)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-trophy"></i></span></div><div class="wstep-label">All Holes Done</div></div>
+        </div>
+      </div>
+<!--    <div class="wizard-stepper" id="asTabs" style="margin-bottom:16px">-->
+<!--      <div class="wstep active" onclick="asGoTo(0)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-people"></i></span></div><div class="wstep-label">Select Foursome</div></div>-->
+<!--      <div class="wstep" onclick="asGoTo(1)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-shuffle"></i></span></div><div class="wstep-label">Generate Matches</div></div>-->
+<!--      <div class="wstep" onclick="asGoTo(2)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-diagram-2"></i></span></div><div class="wstep-label">Match Config</div></div>-->
+<!--      <div class="wstep" onclick="asGoTo(3)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-gear"></i></span></div><div class="wstep-label">Foursome Setting</div></div>-->
+<!--      <div class="wstep" onclick="asGoTo(4)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-sliders"></i></span></div><div class="wstep-label">Foursome Settings</div></div>-->
+<!--      <div class="wstep" onclick="asGoTo(5)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-clipboard2-plus"></i></span></div><div class="wstep-label">Add Score</div></div>-->
+<!--      <div class="wstep" onclick="asGoTo(6)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-grid-3x3"></i></span></div><div class="wstep-label">Holes Grid</div></div>-->
+<!--      <div class="wstep" onclick="asGoTo(7)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-pencil-square"></i></span></div><div class="wstep-label">Scorecard</div></div>-->
+<!--      <div class="wstep" onclick="asGoTo(8)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-stars"></i></span></div><div class="wstep-label">Skode &amp; Junk</div></div>-->
+<!--      <div class="wstep" onclick="asGoTo(9)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-check2-all"></i></span></div><div class="wstep-label">Leaderboard</div></div>-->
+<!--      <div class="wstep" onclick="asGoTo(10)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-bar-chart-line"></i></span></div><div class="wstep-label">Results</div></div>-->
+<!--      <div class="wstep" onclick="asGoTo(11)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-trophy"></i></span></div><div class="wstep-label">All Holes Done</div></div>-->
+<!--    </div>-->
 
     <div class="wizard-slide-panel">
 
-      <!-- Slide 0: Select Foursome -->
-      <div class="wizard-slide active" id="asslide-0">
-        <div class="wizard-slide-info">
-          <div class="wsi-num">01</div>
-          <div class="wsi-body">
-            <div class="wsi-title">Select Foursome</div>
-            <div class="wsi-desc">Tap <strong>Add Score</strong> from the Overview Tab. You will be redirected to the <strong>Select Foursome</strong> screen. A list of available foursomes is displayed — tap your desired foursome to proceed. The foursome flow starts from <strong>Select Cart &amp; Driver</strong>, so tap on it to begin.</div>
-          </div>
-          <div class="wsi-icon"><i class="bi bi-people"></i></div>
-        </div>
-        <div class="wizard-slide-img"><div class="image-placeholder">
-          <img src="images/321MiloSelectFoursome.png" alt="Select Foursome" class="app-image" />
-        </div></div>
-        <div class="wizard-nav">
-          <span></span>
-          <div class="wizard-progress-dots" id="asdots-0"></div>
-          <button class="wizard-nav-btn primary" onclick="asGoTo(1)"><i class="bi bi-arrow-right"></i> Next: Generate Matches</button>
-        </div>
-      </div>
 
-      <!-- Slide 1: Generate Matches -->
-      <div class="wizard-slide" id="asslide-1">
-        <div class="wizard-slide-info">
-          <div class="wsi-num">02</div>
-          <div class="wsi-body">
-            <div class="wsi-title">Generate Matches</div>
-            <div class="wsi-desc">
-              You will now see the <strong>Foursome Players</strong> bottom sheet. Here you can reassign each player as a <strong>Driver</strong> or <strong>Passenger</strong> for <strong>Cart 1</strong> and <strong>Cart 2</strong>.
-              <div style="margin-top:10px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:10px 14px;font-size:.82rem;color:#475569;line-height:1.6">
-                Once you've set the cart assignments, tap <strong>Generate Matches</strong> to automatically create the foursome match pairings based on your selection.
-              </div>
+      <div id="showAddScoreMatchSlide123">
+        <!-- Slide 0: Select Foursome -->
+        <div class="wizard-slide active" id="asslide-0">
+          <div class="wizard-slide-info">
+            <div class="wsi-num">01</div>
+            <div class="wsi-body">
+              <div class="wsi-title">Select Foursome</div>
+              <div class="wsi-desc">Tap <strong>Add Score</strong> from the Overview Tab. You will be redirected to the <strong>Select Foursome</strong> screen. A list of available foursomes is displayed — tap your desired foursome to proceed. The foursome flow starts from <strong>Select Cart &amp; Driver</strong>, so tap on it to begin.</div>
             </div>
+            <div class="wsi-icon"><i class="bi bi-people"></i></div>
           </div>
-          <div class="wsi-icon"><i class="bi bi-shuffle"></i></div>
-        </div>
-        <div class="wizard-slide-img"><div class="image-placeholder">
-          <img src="images/321MiloFoursomePlayers.png" alt="Foursome Players — Generate Matches" class="app-image" />
-        </div></div>
-        <div class="wizard-nav">
-          <button class="wizard-nav-btn" onclick="asGoTo(0)"><i class="bi bi-arrow-left"></i> Back</button>
-          <div class="wizard-progress-dots" id="asdots-1"></div>
-          <button class="wizard-nav-btn primary" onclick="asGoTo(2)"><i class="bi bi-arrow-right"></i> Next: Match Config</button>
-        </div>
-      </div>
-
-      <!-- Slide 2: Match Configuration -->
-      <div class="wizard-slide" id="asslide-2">
-        <div class="wizard-slide-info">
-          <div class="wsi-num">03</div>
-          <div class="wsi-body">
-            <div class="wsi-title">Match Configuration</div>
-            <div class="wsi-desc">
-              After generating matches, you will see the <strong>Foursome Matches</strong> screen showing matches based on holes. The matches are displayed across <strong>6 holes</strong> per match group.
-              <div style="margin-top:10px;display:flex;align-items:flex-start;gap:10px;background:#fef3e2;border:1px solid #fed7aa;border-radius:8px;padding:10px 14px">
-                <i class="bi bi-info-circle" style="color:#c2751a;margin-top:2px;flex-shrink:0"></i>
-                <span style="font-size:.82rem;color:#475569;line-height:1.6">Review the match configuration showing 6-hole matches, then tap <strong>Done</strong> to confirm and proceed to the next step.</span>
-              </div>
-            </div>
+          <div class="wizard-slide-img"><div class="image-placeholder">
+            <img src="images/321MiloSelectFoursome.png" alt="Select Foursome" class="app-image" />
+          </div></div>
+          <div class="wizard-nav">
+            <span></span>
+            <div class="wizard-progress-dots" id="asdots-0"></div>
+            <button class="wizard-nav-btn primary" onclick="asGoTo(1)"><i class="bi bi-arrow-right"></i> Next: Generate Matches</button>
           </div>
-          <div class="wsi-icon"><i class="bi bi-diagram-2"></i></div>
         </div>
-        <div class="wizard-slide-img"><div class="image-placeholder">
-          <img src="images/321MiloMatchConfiguration.png" alt="Match Configuration" class="app-image" />
-        </div></div>
-        <div class="wizard-nav">
-          <button class="wizard-nav-btn" onclick="asGoTo(1)"><i class="bi bi-arrow-left"></i> Back</button>
-          <div class="wizard-progress-dots" id="asdots-2"></div>
-          <button class="wizard-nav-btn primary" onclick="asGoTo(3)"><i class="bi bi-arrow-right"></i> Next: Foursome Setting</button>
-        </div>
-      </div>
 
-      <!-- Slide 3: Select Foursome — Add Foursome Setting -->
-      <div class="wizard-slide" id="asslide-3">
-        <div class="wizard-slide-info">
-          <div class="wsi-num">04</div>
-          <div class="wsi-body">
-            <div class="wsi-title">Add Foursome Setting</div>
-            <div class="wsi-desc">
-              You are back on the <strong>Select Foursome</strong> screen showing your progress. The first two steps are now complete:
-              <div style="margin-top:10px;display:flex;flex-direction:column;gap:6px">
-                <div style="display:flex;align-items:center;gap:10px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:8px 12px;font-size:.82rem;color:#0f172a;font-weight:600">
-                  <i class="bi bi-check-circle-fill" style="color:#16a34a"></i> 1. Select Cart &amp; Driver
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:8px 12px;font-size:.82rem;color:#0f172a;font-weight:600">
-                  <i class="bi bi-check-circle-fill" style="color:#16a34a"></i> 2. Generate Matches
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:8px 12px;font-size:.82rem;color:#0f172a;font-weight:700">
-                  <i class="bi bi-arrow-right-circle-fill" style="color:#2563eb"></i> 3. Add Foursome Setting &nbsp;<span style="font-weight:400;color:#475569">— tap this to continue</span>
+        <!-- Slide 1: Generate Matches -->
+        <div class="wizard-slide" id="asslide-1">
+          <div class="wizard-slide-info">
+            <div class="wsi-num">02</div>
+            <div class="wsi-body">
+              <div class="wsi-title">Generate Matches</div>
+              <div class="wsi-desc">
+                You will now see the <strong>Foursome Players</strong> bottom sheet. Here you can reassign each player as a <strong>Driver</strong> or <strong>Passenger</strong> for <strong>Cart 1</strong> and <strong>Cart 2</strong>.
+                <div style="margin-top:10px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:10px 14px;font-size:.82rem;color:#475569;line-height:1.6">
+                  Once you've set the cart assignments, tap <strong>Generate Matches</strong> to automatically create the foursome match pairings based on your selection.
                 </div>
               </div>
             </div>
+            <div class="wsi-icon"><i class="bi bi-shuffle"></i></div>
           </div>
-          <div class="wsi-icon"><i class="bi bi-gear"></i></div>
+          <div class="wizard-slide-img"><div class="image-placeholder">
+            <img src="images/321MiloFoursomePlayers.png" alt="Foursome Players — Generate Matches" class="app-image" />
+          </div></div>
+          <div class="wizard-nav">
+            <button class="wizard-nav-btn" onclick="asGoTo(0)"><i class="bi bi-arrow-left"></i> Back</button>
+            <div class="wizard-progress-dots" id="asdots-1"></div>
+            <button class="wizard-nav-btn primary" onclick="asGoTo(2)"><i class="bi bi-arrow-right"></i> Next: Match Config</button>
+          </div>
         </div>
-        <div class="wizard-slide-img"><div class="image-placeholder">
-          <img src="images/321MiloSelectFoursomeProgress.png" alt="Select Foursome Progress" class="app-image" />
-        </div></div>
-        <div class="wizard-nav">
-          <button class="wizard-nav-btn" onclick="asGoTo(2)"><i class="bi bi-arrow-left"></i> Back</button>
-          <div class="wizard-progress-dots" id="asdots-3"></div>
-          <button class="wizard-nav-btn primary" onclick="asGoTo(4)"><i class="bi bi-arrow-right"></i> Next: Foursome Settings</button>
-        </div>
-      </div>
 
-      <!-- Slide 4: Foursome Settings (Bottom Sheet) -->
-      <div class="wizard-slide" id="asslide-4">
-        <div class="wizard-slide-info">
-          <div class="wsi-num">05</div>
-          <div class="wsi-body">
-            <div class="wsi-title">Foursome Settings (Bottom Sheet)</div>
-            <div class="wsi-desc">
-              A <strong>bottom sheet</strong> slides up with the foursome configuration options. Fill in the required settings, then enable optional rules using the toggle buttons:
-              <div style="margin-top:10px;display:flex;flex-direction:column;gap:6px">
-                <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:9px 13px;font-size:.81rem;color:#475569;line-height:1.55">
-                  <strong style="color:#0f172a">Rebit &amp; Cheken Rule</strong> — Enable via toggle to activate this rule for your foursome.
-                </div>
-                <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:9px 13px;font-size:.81rem;color:#475569;line-height:1.55">
-                  <strong style="color:#0f172a">Dot Game</strong> — Enable via toggle to activate Dot Game scoring.
-                </div>
-                <div style="background:#fef3e2;border:1px solid #fed7aa;border-radius:8px;padding:9px 13px;font-size:.81rem;color:#475569;line-height:1.55">
-                  <strong style="color:#0f172a">Newt &amp; Towfer Junk</strong> — Enable via toggle. <em>Note: This applies only for the <strong>18th hole</strong>.</em>
+        <!-- Slide 2: Match Configuration -->
+        <div class="wizard-slide" id="asslide-2">
+          <div class="wizard-slide-info">
+            <div class="wsi-num">03</div>
+            <div class="wsi-body">
+              <div class="wsi-title">Match Configuration</div>
+              <div class="wsi-desc">
+                After generating matches, you will see the <strong>Foursome Matches</strong> screen showing matches based on holes. The matches are displayed across <strong>6 holes</strong> per match group.
+                <div style="margin-top:10px;display:flex;align-items:flex-start;gap:10px;background:#fef3e2;border:1px solid #fed7aa;border-radius:8px;padding:10px 14px">
+                  <i class="bi bi-info-circle" style="color:#c2751a;margin-top:2px;flex-shrink:0"></i>
+                  <span style="font-size:.82rem;color:#475569;line-height:1.6">Review the match configuration showing 6-hole matches, then tap <strong>Done</strong> to confirm and proceed to the next step.</span>
                 </div>
               </div>
-              <div style="margin-top:10px;font-size:.82rem;color:#475569">Once all settings are configured, tap <strong>Done</strong> to proceed.</div>
             </div>
+            <div class="wsi-icon"><i class="bi bi-diagram-2"></i></div>
           </div>
-          <div class="wsi-icon"><i class="bi bi-sliders"></i></div>
-        </div>
-        <div class="wizard-slide-img"><div class="image-placeholder">
-          <img src="images/321MiloFoursomeSettingsBottomSheet.png" alt="Foursome Settings (Bottom Sheet)" class="app-image" />
-        </div></div>
-        <div class="wizard-nav">
-          <button class="wizard-nav-btn" onclick="asGoTo(3)"><i class="bi bi-arrow-left"></i> Back</button>
-          <div class="wizard-progress-dots" id="asdots-4"></div>
-          <button class="wizard-nav-btn primary" onclick="asGoTo(5)"><i class="bi bi-arrow-right"></i> Next: Add Score</button>
-        </div>
-      </div>
-
-      <!-- Slide 5: Tap Add Score -->
-      <div class="wizard-slide" id="asslide-5">
-        <div class="wizard-slide-info">
-          <div class="wsi-num">06</div>
-          <div class="wsi-body">
-            <div class="wsi-title">Tap Add Score</div>
-            <div class="wsi-desc">After completing the Foursome Settings, tap the <strong>Add Score</strong> button to continue to the 18-hole score entry grid.</div>
+          <div class="wizard-slide-img"><div class="image-placeholder">
+            <img src="images/321MiloMatchConfiguration.png" alt="Match Configuration" class="app-image" />
+          </div></div>
+          <div class="wizard-nav">
+            <button class="wizard-nav-btn" onclick="asGoTo(1)"><i class="bi bi-arrow-left"></i> Back</button>
+            <div class="wizard-progress-dots" id="asdots-2"></div>
+            <button class="wizard-nav-btn primary" onclick="asGoTo(3)"><i class="bi bi-arrow-right"></i> Next: Foursome Setting</button>
           </div>
-          <div class="wsi-icon"><i class="bi bi-clipboard2-plus"></i></div>
         </div>
-        <div class="wizard-slide-img"><div class="image-placeholder">
-          <img src="images/321MiloTapAddScore.png" alt="Tap Add Score" class="app-image" />
-        </div></div>
-        <div class="wizard-nav">
-          <button class="wizard-nav-btn" onclick="asGoTo(4)"><i class="bi bi-arrow-left"></i> Back</button>
-          <div class="wizard-progress-dots" id="asdots-5"></div>
-          <button class="wizard-nav-btn primary" onclick="asGoTo(6)"><i class="bi bi-arrow-right"></i> Next: Holes Grid</button>
-        </div>
-      </div>
 
-      <!-- Slide 6: 18-Hole Score Grid -->
-      <div class="wizard-slide" id="asslide-6">
-        <div class="wizard-slide-info">
-          <div class="wsi-num">07</div>
-          <div class="wsi-body">
-            <div class="wsi-title">18-Hole Score Grid</div>
-            <div class="wsi-desc">The full <strong>18-hole score grid</strong> opens showing all players in your foursome. Each row is a player, each column is a hole. Tap any <strong>hole number</strong> to start entering scores for that hole.</div>
-          </div>
-          <div class="wsi-icon"><i class="bi bi-grid-3x3"></i></div>
-        </div>
-        <div class="wizard-slide-img"><div class="image-placeholder">
-          <img src="images/321Milo-18-HoleScoreGrid.png" alt="18-Hole Score Grid" class="app-image" />
-        </div></div>
-        <div class="wizard-nav">
-          <button class="wizard-nav-btn" onclick="asGoTo(5)"><i class="bi bi-arrow-left"></i> Back</button>
-          <div class="wizard-progress-dots" id="asdots-6"></div>
-          <button class="wizard-nav-btn primary" onclick="asGoTo(7)"><i class="bi bi-arrow-right"></i> Next: Scorecard</button>
-        </div>
-      </div>
-
-      <!-- Slide 7: Scorecard -->
-      <div class="wizard-slide" id="asslide-7">
-        <div class="wizard-slide-info">
-          <div class="wsi-num">08</div>
-          <div class="wsi-body">
-            <div class="wsi-title">Scorecard — Enter &amp; Save Score</div>
-            <div class="wsi-desc">The <strong>Scorecard tab</strong> opens for the selected hole. Enter the score for each player, then tap <strong>Save</strong> or <strong>Next</strong> to move to the following hole. Repeat for every hole.</div>
-          </div>
-          <div class="wsi-icon"><i class="bi bi-pencil-square"></i></div>
-        </div>
-        <div class="wizard-slide-img"><div class="image-placeholder">
-          <img src="images/scoreEntryScreen.png" alt="Scorecard — Enter &amp; Save Score" class="app-image" />
-        </div></div>
-        <div class="wizard-nav">
-          <button class="wizard-nav-btn" onclick="asGoTo(6)"><i class="bi bi-arrow-left"></i> Back</button>
-          <div class="wizard-progress-dots" id="asdots-7"></div>
-          <button class="wizard-nav-btn primary" onclick="asGoTo(8)"><i class="bi bi-arrow-right"></i> Next: Skode &amp; Junk</button>
-        </div>
-      </div>
-
-      <!-- Slide 8: Skode & Junk -->
-      <div class="wizard-slide" id="asslide-8">
-        <div class="wizard-slide-info">
-          <div class="wsi-num">09</div>
-          <div class="wsi-body">
-            <div class="wsi-title">Skode &amp; Junk Rewards</div>
-            <div class="wsi-desc">
-              After saving a hole score, the <strong>Skode &amp; Junk</strong> section becomes available — these are <strong>side reward events</strong> that run alongside your main game score.
-
-              <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
-
-                <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;overflow:hidden">
-                  <div style="padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:default">
-                    <span style="width:26px;height:26px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">1</span>
-                    <span style="font-size:.85rem;font-weight:700;color:#0f172a">Open the Accordion</span>
-                    <i class="bi bi-chevron-down" style="margin-left:auto;color:#64748b;font-size:12px"></i>
+        <!-- Slide 3: Select Foursome — Add Foursome Setting -->
+        <div class="wizard-slide" id="asslide-3">
+          <div class="wizard-slide-info">
+            <div class="wsi-num">04</div>
+            <div class="wsi-body">
+              <div class="wsi-title">Add Foursome Setting</div>
+              <div class="wsi-desc">
+                You are back on the <strong>Select Foursome</strong> screen showing your progress. The first two steps are now complete:
+                <div style="margin-top:10px;display:flex;flex-direction:column;gap:6px">
+                  <div style="display:flex;align-items:center;gap:10px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:8px 12px;font-size:.82rem;color:#0f172a;font-weight:600">
+                    <i class="bi bi-check-circle-fill" style="color:#16a34a"></i> 1. Select Cart &amp; Driver
                   </div>
-                  <div style="padding:0 14px 10px 50px;font-size:.8rem;color:#475569;line-height:1.6">
-                    Tap the <strong>accordion</strong> to expand it. You will see the available reward categories: <strong>Skode</strong>, <strong>Junk</strong>, <strong>Putts</strong>, <strong>Closest To Pin</strong>, <strong>Longest Drive</strong>, and <strong>Fairways</strong>.
+                  <div style="display:flex;align-items:center;gap:10px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:8px 12px;font-size:.82rem;color:#0f172a;font-weight:600">
+                    <i class="bi bi-check-circle-fill" style="color:#16a34a"></i> 2. Generate Matches
+                  </div>
+                  <div style="display:flex;align-items:center;gap:10px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:8px 12px;font-size:.82rem;color:#0f172a;font-weight:700">
+                    <i class="bi bi-arrow-right-circle-fill" style="color:#2563eb"></i> 3. Add Foursome Setting &nbsp;<span style="font-weight:400;color:#475569">— tap this to continue</span>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="wsi-icon"><i class="bi bi-gear"></i></div>
+          </div>
+          <div class="wizard-slide-img"><div class="image-placeholder">
+            <img src="images/321MiloSelectFoursomeProgress.png" alt="Select Foursome Progress" class="app-image" />
+          </div></div>
+          <div class="wizard-nav">
+            <button class="wizard-nav-btn" onclick="asGoTo(2)"><i class="bi bi-arrow-left"></i> Back</button>
+            <div class="wizard-progress-dots" id="asdots-3"></div>
+            <button class="wizard-nav-btn primary" onclick="asGoTo(4)"><i class="bi bi-arrow-right"></i> Next: Foursome Settings</button>
+          </div>
+        </div>
 
-                <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;overflow:hidden">
-                  <div style="padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:default">
-                    <span style="width:26px;height:26px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">2</span>
-                    <span style="font-size:.85rem;font-weight:700;color:#0f172a">Tap a Reward Category</span>
-                    <i class="bi bi-chevron-down" style="margin-left:auto;color:#64748b;font-size:12px"></i>
+        <!-- Slide 4: Foursome Settings (Bottom Sheet) -->
+        <div class="wizard-slide" id="asslide-4">
+          <div class="wizard-slide-info">
+            <div class="wsi-num">05</div>
+            <div class="wsi-body">
+              <div class="wsi-title">Foursome Settings (Bottom Sheet)</div>
+              <div class="wsi-desc">
+                A <strong>bottom sheet</strong> slides up with the foursome configuration options. Fill in the required settings, then enable optional rules using the toggle buttons:
+                <div style="margin-top:10px;display:flex;flex-direction:column;gap:6px">
+                  <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:9px 13px;font-size:.81rem;color:#475569;line-height:1.55">
+                    <strong style="color:#0f172a">Rebit &amp; Cheken Rule</strong> — Enable via toggle to activate this rule for your foursome.
                   </div>
-                  <div style="padding:0 14px 10px 50px;font-size:.8rem;color:#475569;line-height:1.6">
-                    Tap on any category — <strong>Skode</strong>, <strong>Junk</strong> — to open the <strong>Add Skode &amp; Junk pop-up</strong>.
+                  <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:9px 13px;font-size:.81rem;color:#475569;line-height:1.55">
+                    <strong style="color:#0f172a">Dot Game</strong> — Enable via toggle to activate Dot Game scoring.
+                  </div>
+                  <div style="background:#fef3e2;border:1px solid #fed7aa;border-radius:8px;padding:9px 13px;font-size:.81rem;color:#475569;line-height:1.55">
+                    <strong style="color:#0f172a">Newt &amp; Towfer Junk</strong> — Enable via toggle. <em>Note: This applies only for the <strong>18th hole</strong>.</em>
                   </div>
                 </div>
+                <div style="margin-top:10px;font-size:.82rem;color:#475569">Once all settings are configured, tap <strong>Done</strong> to proceed.</div>
+              </div>
+            </div>
+            <div class="wsi-icon"><i class="bi bi-sliders"></i></div>
+          </div>
+          <div class="wizard-slide-img"><div class="image-placeholder">
+            <img src="images/321MiloFoursomeSettingsBottomSheet.png" alt="Foursome Settings (Bottom Sheet)" class="app-image" />
+          </div></div>
+          <div class="wizard-nav">
+            <button class="wizard-nav-btn" onclick="asGoTo(3)"><i class="bi bi-arrow-left"></i> Back</button>
+            <div class="wizard-progress-dots" id="asdots-4"></div>
+            <button class="wizard-nav-btn primary" onclick="asGoTo(5)"><i class="bi bi-arrow-right"></i> Next: Add Score</button>
+          </div>
+        </div>
 
-                <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;overflow:hidden">
-                  <div style="padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:default">
-                    <span style="width:26px;height:26px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">3</span>
-                    <span style="font-size:.85rem;font-weight:700;color:#0f172a">Add Skode / Junk in Pop-up</span>
-                    <i class="bi bi-chevron-down" style="margin-left:auto;color:#64748b;font-size:12px"></i>
+        <!-- Slide 5: Tap Add Score -->
+        <div class="wizard-slide" id="asslide-5">
+          <div class="wizard-slide-info">
+            <div class="wsi-num">06</div>
+            <div class="wsi-body">
+              <div class="wsi-title">Tap Add Score</div>
+              <div class="wsi-desc">After completing the Foursome Settings, tap the <strong>Add Score</strong> button to continue to the 18-hole score entry grid.</div>
+            </div>
+            <div class="wsi-icon"><i class="bi bi-clipboard2-plus"></i></div>
+          </div>
+          <div class="wizard-slide-img"><div class="image-placeholder">
+            <img src="images/321MiloTapAddScore.png" alt="Tap Add Score" class="app-image" />
+          </div></div>
+          <div class="wizard-nav">
+            <button class="wizard-nav-btn" onclick="asGoTo(4)"><i class="bi bi-arrow-left"></i> Back</button>
+            <div class="wizard-progress-dots" id="asdots-5"></div>
+            <button class="wizard-nav-btn primary" onclick="asGoTo(6)"><i class="bi bi-arrow-right"></i> Next: Holes Grid</button>
+          </div>
+        </div>
+
+        <!-- Slide 6: 18-Hole Score Grid -->
+        <div class="wizard-slide" id="asslide-6">
+          <div class="wizard-slide-info">
+            <div class="wsi-num">07</div>
+            <div class="wsi-body">
+              <div class="wsi-title">18-Hole Score Grid</div>
+              <div class="wsi-desc">The full <strong>18-hole score grid</strong> opens showing all players in your foursome. Each row is a player, each column is a hole. Tap any <strong>hole number</strong> to start entering scores for that hole.</div>
+            </div>
+            <div class="wsi-icon"><i class="bi bi-grid-3x3"></i></div>
+          </div>
+          <div class="wizard-slide-img"><div class="image-placeholder">
+            <img src="images/321Milo-18-HoleScoreGrid.png" alt="18-Hole Score Grid" class="app-image" />
+          </div></div>
+          <div class="wizard-nav">
+            <button class="wizard-nav-btn" onclick="asGoTo(5)"><i class="bi bi-arrow-left"></i> Back</button>
+            <div class="wizard-progress-dots" id="asdots-6"></div>
+            <button class="wizard-nav-btn primary" onclick="asGoTo(7)"><i class="bi bi-arrow-right"></i> Next: Scorecard</button>
+          </div>
+        </div>
+
+        <!-- Slide 7: Scorecard -->
+        <div class="wizard-slide" id="asslide-7">
+          <div class="wizard-slide-info">
+            <div class="wsi-num">08</div>
+            <div class="wsi-body">
+              <div class="wsi-title">Scorecard — Enter &amp; Save Score</div>
+              <div class="wsi-desc">The <strong>Scorecard tab</strong> opens for the selected hole. Enter the score for each player, then tap <strong>Save</strong> or <strong>Next</strong> to move to the following hole. Repeat for every hole.</div>
+            </div>
+            <div class="wsi-icon"><i class="bi bi-pencil-square"></i></div>
+          </div>
+          <div class="wizard-slide-img"><div class="image-placeholder">
+            <img src="images/scoreEntryScreen.png" alt="Scorecard — Enter &amp; Save Score" class="app-image" />
+          </div></div>
+          <div class="wizard-nav">
+            <button class="wizard-nav-btn" onclick="asGoTo(6)"><i class="bi bi-arrow-left"></i> Back</button>
+            <div class="wizard-progress-dots" id="asdots-7"></div>
+            <button class="wizard-nav-btn primary" onclick="asGoTo(8)"><i class="bi bi-arrow-right"></i> Next: Skode &amp; Junk</button>
+          </div>
+        </div>
+
+        <!-- Slide 8: Skode & Junk -->
+        <div class="wizard-slide" id="asslide-8">
+          <div class="wizard-slide-info">
+            <div class="wsi-num">09</div>
+            <div class="wsi-body">
+              <div class="wsi-title">Skode &amp; Junk Rewards</div>
+              <div class="wsi-desc">
+                After saving a hole score, the <strong>Skode &amp; Junk</strong> section becomes available — these are <strong>side reward events</strong> that run alongside your main game score.
+
+                <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
+
+                  <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;overflow:hidden">
+                    <div style="padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:default">
+                      <span style="width:26px;height:26px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">1</span>
+                      <span style="font-size:.85rem;font-weight:700;color:#0f172a">Open the Accordion</span>
+                      <i class="bi bi-chevron-down" style="margin-left:auto;color:#64748b;font-size:12px"></i>
+                    </div>
+                    <div style="padding:0 14px 10px 50px;font-size:.8rem;color:#475569;line-height:1.6">
+                      Tap the <strong>accordion</strong> to expand it. You will see the available reward categories: <strong>Skode</strong>, <strong>Junk</strong>, <strong>Putts</strong>, <strong>Closest To Pin</strong>, <strong>Longest Drive</strong>, and <strong>Fairways</strong>.
+                    </div>
                   </div>
-                  <div style="padding:0 14px 10px 50px;font-size:.8rem;color:#475569;line-height:1.6">
-                    In the pop-up, assign the reward based on the outcome:
-                    <div style="display:flex;flex-direction:column;gap:5px;margin-top:6px">
-                      <div style="display:flex;align-items:center;gap:8px">
-                        <span style="background:#dcfce7;color:#16a34a;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:99px;flex-shrink:0">MADE</span>
-                        <span>Player successfully completed the reward condition (e.g., made the putt, hit the fairway).</span>
-                      </div>
-                      <div style="display:flex;align-items:center;gap:8px">
-                        <span style="background:#fee2e2;color:#dc2626;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:99px;flex-shrink:0">MISSED</span>
-                        <span>Player attempted but did not meet the reward condition.</span>
-                      </div>
-                      <div style="display:flex;align-items:center;gap:8px">
-                        <span style="background:#fef3e2;color:#e8a020;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:99px;flex-shrink:0">EARNED</span>
-                        <span>Player earned the reward event (e.g., birdie, closest to pin, longest drive).</span>
+
+                  <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;overflow:hidden">
+                    <div style="padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:default">
+                      <span style="width:26px;height:26px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">2</span>
+                      <span style="font-size:.85rem;font-weight:700;color:#0f172a">Tap a Reward Category</span>
+                      <i class="bi bi-chevron-down" style="margin-left:auto;color:#64748b;font-size:12px"></i>
+                    </div>
+                    <div style="padding:0 14px 10px 50px;font-size:.8rem;color:#475569;line-height:1.6">
+                      Tap on any category — <strong>Skode</strong>, <strong>Junk</strong> — to open the <strong>Add Skode &amp; Junk pop-up</strong>.
+                    </div>
+                  </div>
+
+                  <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;overflow:hidden">
+                    <div style="padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:default">
+                      <span style="width:26px;height:26px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">3</span>
+                      <span style="font-size:.85rem;font-weight:700;color:#0f172a">Add Skode / Junk in Pop-up</span>
+                      <i class="bi bi-chevron-down" style="margin-left:auto;color:#64748b;font-size:12px"></i>
+                    </div>
+                    <div style="padding:0 14px 10px 50px;font-size:.8rem;color:#475569;line-height:1.6">
+                      In the pop-up, assign the reward based on the outcome:
+                      <div style="display:flex;flex-direction:column;gap:5px;margin-top:6px">
+                        <div style="display:flex;align-items:center;gap:8px">
+                          <span style="background:#dcfce7;color:#16a34a;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:99px;flex-shrink:0">MADE</span>
+                          <span>Player successfully completed the reward condition (e.g., made the putt, hit the fairway).</span>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:8px">
+                          <span style="background:#fee2e2;color:#dc2626;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:99px;flex-shrink:0">MISSED</span>
+                          <span>Player attempted but did not meet the reward condition.</span>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:8px">
+                          <span style="background:#fef3e2;color:#e8a020;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:99px;flex-shrink:0">EARNED</span>
+                          <span>Player earned the reward event (e.g., birdie, closest to pin, longest drive).</span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;overflow:hidden">
-                  <div style="padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:default">
-                    <span style="width:26px;height:26px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">4</span>
-                    <span style="font-size:.85rem;font-weight:700;color:#0f172a">Saved to Ledger</span>
-                    <i class="bi bi-chevron-down" style="margin-left:auto;color:#64748b;font-size:12px"></i>
+                  <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;overflow:hidden">
+                    <div style="padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:default">
+                      <span style="width:26px;height:26px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">4</span>
+                      <span style="font-size:.85rem;font-weight:700;color:#0f172a">Saved to Ledger</span>
+                      <i class="bi bi-chevron-down" style="margin-left:auto;color:#64748b;font-size:12px"></i>
+                    </div>
+                    <div style="padding:0 14px 10px 50px;font-size:.8rem;color:#475569;line-height:1.6">
+                      Once assigned, the reward is saved and <strong>feeds directly into the Ledger</strong> and payout calculations automatically.
+                    </div>
                   </div>
-                  <div style="padding:0 14px 10px 50px;font-size:.8rem;color:#475569;line-height:1.6">
-                    Once assigned, the reward is saved and <strong>feeds directly into the Ledger</strong> and payout calculations automatically.
-                  </div>
-                </div>
 
+                </div>
               </div>
             </div>
+            <div class="wsi-icon"><i class="bi bi-stars"></i></div>
           </div>
-          <div class="wsi-icon"><i class="bi bi-stars"></i></div>
-        </div>
-        <div class="wizard-slide-img"><div class="image-placeholder">
-          <img src="images/skode&JunkRewards.png" alt="Skode &amp; Junk Rewards" class="app-image" />
-        </div></div>
-        <div class="wizard-nav">
-          <button class="wizard-nav-btn" onclick="asGoTo(7)"><i class="bi bi-arrow-left"></i> Back</button>
-          <div class="wizard-progress-dots" id="asdots-8"></div>
-          <button class="wizard-nav-btn primary" onclick="asGoTo(9)"><i class="bi bi-arrow-right"></i> Next: Leaderboard</button>
-        </div>
-      </div>
-
-      <!-- Slide 9: Leaderboard -->
-      <div class="wizard-slide" id="asslide-9">
-        <div class="wizard-slide-info">
-          <div class="wsi-num">10</div>
-          <div class="wsi-body">
-            <div class="wsi-title">Leaderboard</div>
-            <div class="wsi-desc">The <strong>Leaderboard</strong> displays the final standings for all foursomes in the game — including net scores, Skode &amp; Junk rewards, and overall rankings. All bet outcomes are reflected in the <strong>Results Tab</strong>.</div>
+          <div class="wizard-slide-img"><div class="image-placeholder">
+            <img src="images/skode&JunkRewards.png" alt="Skode &amp; Junk Rewards" class="app-image" />
+          </div></div>
+          <div class="wizard-nav">
+            <button class="wizard-nav-btn" onclick="asGoTo(7)"><i class="bi bi-arrow-left"></i> Back</button>
+            <div class="wizard-progress-dots" id="asdots-8"></div>
+            <button class="wizard-nav-btn primary" onclick="asGoTo(9)"><i class="bi bi-arrow-right"></i> Next: Leaderboard</button>
           </div>
-          <div class="wsi-icon"><i class="bi bi-trophy"></i></div>
         </div>
-        <div class="wizard-slide-img"><div class="image-placeholder">
-          <img src="images/leaderboard.png" alt="Final Leaderboard" class="app-image" />
-        </div></div>
-        <div class="wizard-nav">
-          <button class="wizard-nav-btn" onclick="asGoTo(8)"><i class="bi bi-arrow-left"></i> Back</button>
-          <div class="wizard-progress-dots" id="asdots-9"></div>
-          <button class="wizard-nav-btn primary" onclick="asGoTo(10)"><i class="bi bi-arrow-right"></i> Next: Results</button>
-        </div>
-      </div>
 
-      <!-- Slide 10: View Results Tab -->
-      <div class="wizard-slide" id="asslide-10">
-        <div class="wizard-slide-info">
-          <div class="wsi-num">11</div>
-          <div class="wsi-body">
-            <div class="wsi-title">View Results Tab</div>
-            <div class="wsi-desc">Navigate to the <strong>Results Tab</strong> from the Game Details screen. Here you can view your foursome's <strong>standings, net scores, and rankings</strong> updated in real time after each score entry.</div>
+        <!-- Slide 9: Leaderboard -->
+        <div class="wizard-slide" id="asslide-9">
+          <div class="wizard-slide-info">
+            <div class="wsi-num">10</div>
+            <div class="wsi-body">
+              <div class="wsi-title">Leaderboard</div>
+              <div class="wsi-desc">The <strong>Leaderboard</strong> displays the final standings for all foursomes in the game — including net scores, Skode &amp; Junk rewards, and overall rankings. All bet outcomes are reflected in the <strong>Results Tab</strong>.</div>
+            </div>
+            <div class="wsi-icon"><i class="bi bi-trophy"></i></div>
           </div>
-          <div class="wsi-icon"><i class="bi bi-bar-chart-line"></i></div>
+          <div class="wizard-slide-img"><div class="image-placeholder">
+            <img src="images/leaderboard.png" alt="Final Leaderboard" class="app-image" />
+          </div></div>
+          <div class="wizard-nav">
+            <button class="wizard-nav-btn" onclick="asGoTo(8)"><i class="bi bi-arrow-left"></i> Back</button>
+            <div class="wizard-progress-dots" id="asdots-9"></div>
+            <button class="wizard-nav-btn primary" onclick="asGoTo(10)"><i class="bi bi-arrow-right"></i> Next: Results</button>
+          </div>
         </div>
-        <div class="wizard-slide-img"><div class="image-placeholder">
-          <img src="images/viewAddScoreResultsTab.png" alt="View Results Tab" class="app-image" />
-        </div></div>
-        <div class="wizard-nav">
-          <button class="wizard-nav-btn" onclick="asGoTo(9)"><i class="bi bi-arrow-left"></i> Back</button>
-          <div class="wizard-progress-dots" id="asdots-10"></div>
-          <button class="wizard-nav-btn primary" onclick="asGoTo(11)"><i class="bi bi-arrow-right"></i> Next: All Holes Done</button>
+
+        <!-- Slide 10: View Results Tab -->
+        <div class="wizard-slide" id="asslide-10">
+          <div class="wizard-slide-info">
+            <div class="wsi-num">11</div>
+            <div class="wsi-body">
+              <div class="wsi-title">View Results Tab</div>
+              <div class="wsi-desc">Navigate to the <strong>Results Tab</strong> from the Game Details screen. Here you can view your foursome's <strong>standings, net scores, and rankings</strong> updated in real time after each score entry.</div>
+            </div>
+            <div class="wsi-icon"><i class="bi bi-bar-chart-line"></i></div>
+          </div>
+          <div class="wizard-slide-img"><div class="image-placeholder">
+            <img src="images/viewAddScoreResultsTab.png" alt="View Results Tab" class="app-image" />
+          </div></div>
+          <div class="wizard-nav">
+            <button class="wizard-nav-btn" onclick="asGoTo(9)"><i class="bi bi-arrow-left"></i> Back</button>
+            <div class="wizard-progress-dots" id="asdots-10"></div>
+            <button class="wizard-nav-btn primary" onclick="asGoTo(11)"><i class="bi bi-arrow-right"></i> Next: All Holes Done</button>
+          </div>
         </div>
-      </div>
 
-      <!-- Slide 11: All Holes Done -->
-      <div class="wizard-slide" id="asslide-11">
-        <div class="wizard-slide-info">
-          <div class="wsi-num">12</div>
-          <div class="wsi-body">
-            <div class="wsi-title">All Holes Score Added</div>
-            <div class="wsi-desc">
-              Once scores have been entered for all 18 holes, the score grid shows a <strong>green ✓ tick on every hole</strong> — confirming all scores are recorded. Totals and net scores are automatically calculated. Here's what happens next:
+        <!-- Slide 11: All Holes Done -->
+        <div class="wizard-slide" id="asslide-11">
+          <div class="wizard-slide-info">
+            <div class="wsi-num">12</div>
+            <div class="wsi-body">
+              <div class="wsi-title">All Holes Score Added</div>
+              <div class="wsi-desc">
+                Once scores have been entered for all 18 holes, the score grid shows a <strong>green ✓ tick on every hole</strong> — confirming all scores are recorded. Totals and net scores are automatically calculated. Here's what happens next:
 
-              <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px">
+                <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px">
 
-                <div style="display:flex;align-items:flex-start;gap:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:12px 14px">
-                  <span style="width:28px;height:28px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;margin-top:1px">✓</span>
-                  <div>
-                    <div style="font-size:.85rem;font-weight:700;color:#0f172a;margin-bottom:3px">Green Tick on All 18 Holes</div>
-                    <div style="font-size:.78rem;color:#475569;line-height:1.55">Every hole cell in the score grid displays a <strong>green tick</strong> confirming the score has been saved. Total and net scores are shown at the bottom of the grid.</div>
+                  <div style="display:flex;align-items:flex-start;gap:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:12px 14px">
+                    <span style="width:28px;height:28px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;margin-top:1px">✓</span>
+                    <div>
+                      <div style="font-size:.85rem;font-weight:700;color:#0f172a;margin-bottom:3px">Green Tick on All 18 Holes</div>
+                      <div style="font-size:.78rem;color:#475569;line-height:1.55">Every hole cell in the score grid displays a <strong>green tick</strong> confirming the score has been saved. Total and net scores are shown at the bottom of the grid.</div>
+                    </div>
                   </div>
-                </div>
 
-                <div style="display:flex;align-items:flex-start;gap:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:12px 14px">
-                  <span style="width:28px;height:28px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;margin-top:1px">2</span>
-                  <div>
-                    <div style="font-size:.85rem;font-weight:700;color:#0f172a;margin-bottom:3px">Tap "Finish Foursome"</div>
-                    <div style="font-size:.78rem;color:#475569;line-height:1.55">Once all holes are marked complete, tap the <strong>Finish Foursome</strong> button to finalise the scoring session for your group.</div>
+                  <div style="display:flex;align-items:flex-start;gap:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:12px 14px">
+                    <span style="width:28px;height:28px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;margin-top:1px">2</span>
+                    <div>
+                      <div style="font-size:.85rem;font-weight:700;color:#0f172a;margin-bottom:3px">Tap "Finish Foursome"</div>
+                      <div style="font-size:.78rem;color:#475569;line-height:1.55">Once all holes are marked complete, tap the <strong>Finish Foursome</strong> button to finalise the scoring session for your group.</div>
+                    </div>
                   </div>
-                </div>
 
-                <div style="display:flex;align-items:flex-start;gap:12px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:12px 14px">
-                  <span style="width:28px;height:28px;background:#2563eb;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;margin-top:1px">→</span>
-                  <div>
-                    <div style="font-size:.85rem;font-weight:700;color:#0f172a;margin-bottom:3px">Redirected to Game Details → Results Tab</div>
-                    <div style="font-size:.78rem;color:#475569;line-height:1.55">You are automatically redirected to the <strong>Game Details screen</strong>, landing on the <strong>Results Tab → All Players</strong> view — showing the complete standings, net scores, and rankings for everyone in the game.</div>
+                  <div style="display:flex;align-items:flex-start;gap:12px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:12px 14px">
+                    <span style="width:28px;height:28px;background:#2563eb;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;margin-top:1px">→</span>
+                    <div>
+                      <div style="font-size:.85rem;font-weight:700;color:#0f172a;margin-bottom:3px">Redirected to Game Details → Results Tab</div>
+                      <div style="font-size:.78rem;color:#475569;line-height:1.55">You are automatically redirected to the <strong>Game Details screen</strong>, landing on the <strong>Results Tab → All Players</strong> view — showing the complete standings, net scores, and rankings for everyone in the game.</div>
+                    </div>
                   </div>
-                </div>
 
+                </div>
               </div>
             </div>
+            <div class="wsi-icon"><i class="bi bi-check2-all"></i></div>
           </div>
-          <div class="wsi-icon"><i class="bi bi-check2-all"></i></div>
+          <div class="wizard-slide-img"><div class="image-placeholder">
+            <img src="images/allHolesScoreAdded.png" alt="All Holes Score Added" class="app-image" />
+          </div></div>
+          <div class="wizard-nav">
+            <button class="wizard-nav-btn" onclick="asGoTo(10)"><i class="bi bi-arrow-left"></i> Back</button>
+            <div class="wizard-progress-dots" id="asdots-11"></div>
+            <span style="font-size:.8rem;color:var(--ink-faint)">&#10003; Scoring Complete!</span>
+          </div>
         </div>
-        <div class="wizard-slide-img"><div class="image-placeholder">
-          <img src="images/allHolesScoreAdded.png" alt="All Holes Score Added" class="app-image" />
-        </div></div>
-        <div class="wizard-nav">
-          <button class="wizard-nav-btn" onclick="asGoTo(10)"><i class="bi bi-arrow-left"></i> Back</button>
-          <div class="wizard-progress-dots" id="asdots-11"></div>
-          <span style="font-size:.8rem;color:var(--ink-faint)">&#10003; Scoring Complete!</span>
-        </div>
+
       </div>
+
+
 
     </div>
       <div class="success-message" style="margin-top:20px"><i class="bi bi-check-circle-fill"></i><span>Scores saved and results updated successfully!</span></div>
 
       <div class="info-box info-box-primary" style="margin-top:14px">
         <div class="info-icon"><i class="bi bi-info-circle"></i></div>
-        <div class="info-content"><h5>Game-Type Note</h5><p>Based on the selected game type (e.g., <strong>321 Milo</strong>), the scoring flow may include additional configuration steps before the score grid opens.</p></div>
+        <div class="info-content"><h5>Game-Type Note</h5><p>Based on the selected game type, the scoring flow may include additional configuration steps before the score grid opens.</p></div>
       </div>
 
     </div>
@@ -3052,50 +3235,25 @@ window.signupGoTo = function(n) {
 };
 signupGoTo(0);
 
-// ── CREATE GAME WIZARD (12 steps) ──
-var NUM_CG_SLIDES = 10;
-window.cgGoTo = function(n) {
-  for (var i = 0; i < NUM_CG_SLIDES; i++) {
-    var s = document.getElementById('cgslide-' + i);
-    var t = document.querySelectorAll('#cgTabs .wstep')[i];
-    if (s) s.classList.toggle('active', i === n);
-    if (t) t.classList.toggle('active', i === n);
-  }
-  for (var i = 0; i < NUM_CG_SLIDES; i++) {
-    var dc = document.getElementById('cgdots-' + i);
-    if (!dc) continue;
-    dc.innerHTML = '';
-    for (var j = 0; j < NUM_CG_SLIDES; j++) {
-      var d = document.createElement('div');
-      d.className = 'wdot' + (j === n ? ' active' : '');
-      dc.appendChild(d);
-    }
-  }
-  var tabs = document.querySelectorAll('#cgTabs .wstep');
-  if (tabs[n]) {
-    tabs[n].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-  }
-};
-cgGoTo(0);
-
 
 // ── ADD SCORE WIZARD (9 steps) ──
 <!--var NUM_AS = 9;-->
 <!--321 Milo Cod 6 Holes Matches-->
 var NUM_AS = 12;
+window.NUM_AS = NUM_AS;
 window.asGoTo = function(n) {
 
-  for (var i = 0; i < NUM_AS; i++) {
+  for (var i = 0; i < window.NUM_AS; i++) {
     var s = document.getElementById('asslide-' + i);
     var t = document.querySelectorAll('#asTabs .wstep')[i];
     if (s) s.classList.toggle('active', i === n);
     if (t) t.classList.toggle('active', i === n);
   }
-  for (var i = 0; i < NUM_AS; i++) {
+  for (var i = 0; i < window.NUM_AS; i++) {
     var dc = document.getElementById('asdots-' + i);
     if (!dc) continue;
     dc.innerHTML = '';
-    for (var j = 0; j < NUM_AS; j++) {
+    for (var j = 0; j < window.NUM_AS; j++) {
       var d = document.createElement('div');
       d.className = 'wdot' + (j === n ? ' active' : '');
       dc.appendChild(d);
@@ -3157,5 +3315,7 @@ window.vlGoTo = function(n) {
 // ── SCROLL RESTORATION ──
 window.scrollTo(0,0);
 </script>
+<script src="JavaScripts/create-game.js"></script>
+
 </body>
 </html>
