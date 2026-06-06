@@ -35,6 +35,11 @@
         img8:  'images/321_milo_image/321MiloGameCreatedSuccessfully.png',
         img9:  'images/321_milo_image/321MiloGameOverview.png',
         img10:  'images/321_milo_image/321MiloAddBetsScreen.png',
+        img11:  'images/321_milo_image/321MiloAllPlayersResult.png',
+        img12:  'images/321_milo_image/321MiloFoursomeTab.png',
+        img13:  'images/321_milo_image/321MiloFoursomeScorecard.png',
+        img14:  'images/321_milo_image/321MiloFoursomeWinners.png',
+        img15:  'images/321_milo_image/321MiloLedgerPageView.png',
         playTypeBadges: [
           {label:'COD ✓',active:true},{label:'2v2',active:true},{label:'Random',active:true},
           {label:'4v4',active:false},{label:'Cards',active:false},{label:'Ultra Vegas',active:false},
@@ -165,10 +170,9 @@
                                 <div class="action-card"><div class="action-icon"><i class="bi bi-eye"></i></div><div><div class="action-title">2. View Game</div><div class="action-desc">Opens the Game Details screen with access to Overview, Results, Ledger, Add Score, and Add Bets tabs.</div></div></div>
                                 <div class="action-card"><div class="action-icon"><i class="bi bi-calendar-plus"></i></div><div><div class="action-title">3. Create Game for Another Day</div><div class="action-desc">Create another game within the same event using the same tee sheet or a new one.</div></div></div>`,
         playTypeNote: '<strong>321 Milo</strong> — available play types: <strong>COD</strong>, <strong>2v2</strong>, <strong>Random</strong>. Currently selected: <strong>COD</strong>.<br/><span style="font-size:.7rem;opacity:.8">Greyed-out options are not available for this game type.</span>',
-//        holesDetail: '<div style="flex:1;background:#f1f5f2;border:1.5px solid var(--border);border-radius:7px;padding:10px 12px;text-align:center"><div style="font-size:.85rem;font-weight:800;color:var(--ink-muted)">3 Holes</div><div style="font-size:.68rem;color:var(--ink-faint);margin-top:2px">Per Match</div></div><div style="flex:1;background:#dcfce7;border:1.5px solid #15803d;border-radius:7px;padding:10px 12px;text-align:center;position:relative"><div style="font-size:.85rem;font-weight:800;color:#15803d">6 Holes</div><div style="font-size:.68rem;color:#166534;margin-top:2px">Per Match</div><span style="position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:#15803d;color:#fff;font-size:.58rem;font-weight:700;padding:1px 7px;border-radius:100px;white-space:nowrap">DEFAULT</span></div>',
-//        amountFields: '<div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-cash-coin" style="color:var(--brand);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Bet per Match</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">DEFAULT</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Wager amount per match. Pre-filled — update if needed.</p></div><div style="background:#dcfce7;border:1.5px solid #15803d;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.1rem;font-weight:800;color:#15803d">$3.00</div><div style="font-size:.6rem;color:#166534;font-weight:600;text-transform:uppercase">per match</div></div></div></div><div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-stars" style="color:var(--accent);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Skode Pool</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">DEFAULT</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Total pool for Skode side rewards. Pre-filled.</p></div><div style="background:#fef3e2;border:1.5px solid var(--accent);border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.1rem;font-weight:800;color:var(--accent)">$5.00</div><div style="font-size:.6rem;color:var(--accent);font-weight:600;text-transform:uppercase">pool total</div></div></div></div><div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-trophy" style="color:#7c3aed;font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Junk Pool</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">DEFAULT</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Total pool for Junk side rewards. Pre-filled.</p></div><div style="background:#ede9fe;border:1.5px solid #7c3aed;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.1rem;font-weight:800;color:#7c3aed">$2.00</div><div style="font-size:.6rem;color:#7c3aed;font-weight:600;text-transform:uppercase">pool total</div></div></div></div>',
-//        pointsFields: '<div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-flag-fill" style="color:var(--brand);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Point per Hole Win</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">Required</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Points for winning a single hole. Pre-filled.</p></div><div style="background:#dcfce7;border:1.5px solid #15803d;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.2rem;font-weight:800;color:#15803d">1</div><div style="font-size:.6rem;color:#166534;font-weight:600;text-transform:uppercase">pt / hole</div></div></div></div><div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-trophy-fill" style="color:var(--accent);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Point per Match Win</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">Required</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Points for winning an entire match. Pre-filled.</p></div><div style="background:#fef3e2;border:1.5px solid var(--accent);border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.2rem;font-weight:800;color:var(--accent)">0</div><div style="font-size:.6rem;color:var(--accent);font-weight:600;text-transform:uppercase">pt / match</div></div></div></div>'
-
+        holesDetail: '<div style="flex:1;background:#f1f5f2;border:1.5px solid var(--border);border-radius:7px;padding:10px 12px;text-align:center"><div style="font-size:.85rem;font-weight:800;color:var(--ink-muted)">3 Holes</div><div style="font-size:.68rem;color:var(--ink-faint);margin-top:2px">Per Match</div></div><div style="flex:1;background:#dcfce7;border:1.5px solid #15803d;border-radius:7px;padding:10px 12px;text-align:center;position:relative"><div style="font-size:.85rem;font-weight:800;color:#15803d">6 Holes</div><div style="font-size:.68rem;color:#166534;margin-top:2px">Per Match</div><span style="position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:#15803d;color:#fff;font-size:.58rem;font-weight:700;padding:1px 7px;border-radius:100px;white-space:nowrap">DEFAULT</span></div>',
+        amountFields: '<div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-cash-coin" style="color:var(--brand);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Bet per Match</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">DEFAULT</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Wager amount per match. Pre-filled — update if needed.</p></div><div style="background:#dcfce7;border:1.5px solid #15803d;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.1rem;font-weight:800;color:#15803d">$3.00</div><div style="font-size:.6rem;color:#166534;font-weight:600;text-transform:uppercase">per match</div></div></div></div><div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-stars" style="color:var(--accent);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Skode Pool</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">DEFAULT</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Total pool for Skode side rewards. Pre-filled.</p></div><div style="background:#fef3e2;border:1.5px solid var(--accent);border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.1rem;font-weight:800;color:var(--accent)">$5.00</div><div style="font-size:.6rem;color:var(--accent);font-weight:600;text-transform:uppercase">pool total</div></div></div></div><div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-trophy" style="color:#7c3aed;font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Junk Pool</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">DEFAULT</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Total pool for Junk side rewards. Pre-filled.</p></div><div style="background:#ede9fe;border:1.5px solid #7c3aed;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.1rem;font-weight:800;color:#7c3aed">$2.00</div><div style="font-size:.6rem;color:#7c3aed;font-weight:600;text-transform:uppercase">pool total</div></div></div></div>',
+        pointsFields: '<div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-flag-fill" style="color:var(--brand);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Point per Hole Win</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">Required</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Points for winning a single hole. Pre-filled.</p></div><div style="background:#dcfce7;border:1.5px solid #15803d;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.2rem;font-weight:800;color:#15803d">1</div><div style="font-size:.6rem;color:#166534;font-weight:600;text-transform:uppercase">pt / hole</div></div></div></div><div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-trophy-fill" style="color:var(--accent);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Point per Match Win</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">Required</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Points for winning an entire match. Pre-filled.</p></div><div style="background:#fef3e2;border:1.5px solid var(--accent);border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.2rem;font-weight:800;color:var(--accent)">0</div><div style="font-size:.6rem;color:var(--accent);font-weight:600;text-transform:uppercase">pt / match</div></div></div></div>',
       /* add score flow */
       addScoreTitle1:`Enter player scores across the 18-hole grid — 12 steps.`,
       addScoreTitle2:`Score Entry Flow — 12 Steps`,
@@ -556,6 +560,11 @@
         img7:  'images/321MiloSetPoints.png',
         img9:  'images/321MiloGameCreatedSuccessfully.png',
         img10:  'images/321MiloAddBetsScreen.png',
+        img11:  'images/321_milo_image/321MiloAllPlayersResult.png',
+        img12:  'images/321_milo_image/321MiloAddBetsScreen.png',
+        img13:  'images/321_milo_image/321MiloAddBetsScreen.png',
+        img14:  'images/321_milo_image/321MiloAddBetsScreen.png',
+        img15:  'images/321_milo_image/321MiloAddBetsScreen.png',
         playTypeBadges: [
           {label:'Individual ✓',active:true},{label:'1v1',active:false},{label:'Cards',active:false},
           {label:'COD',active:false},{label:'2v2',active:false},{label:'Random',active:false},
@@ -657,10 +666,10 @@
                                                   </div>`,
         gameCreatedTitle:``,
         gameCreatedFooter :``,
-//        playTypeNote: '<strong>Calcutta</strong> — available play types: <strong>Individual</strong>, <strong>1v1</strong>, <strong>Cards</strong>. Auction-based team bidding with full 18-hole scoring.<br/><span style="font-size:.7rem;opacity:.8">Greyed-out options are not available for Calcutta.</span>',
-//        holesDetail: '<div style="flex:1;background:#f1f5f2;border:1.5px solid var(--border);border-radius:7px;padding:10px 12px;text-align:center"><div style="font-size:.85rem;font-weight:800;color:var(--ink-muted)">Front 9</div><div style="font-size:.68rem;color:var(--ink-faint);margin-top:2px">Holes 1–9</div></div><div style="flex:1;background:#f1f5f2;border:1.5px solid var(--border);border-radius:7px;padding:10px 12px;text-align:center"><div style="font-size:.85rem;font-weight:800;color:var(--ink-muted)">Back 9</div><div style="font-size:.68rem;color:var(--ink-faint);margin-top:2px">Holes 10–18</div></div><div style="flex:1;background:#dcfce7;border:1.5px solid #15803d;border-radius:7px;padding:10px 12px;text-align:center;position:relative"><div style="font-size:.85rem;font-weight:800;color:#15803d">Full 18</div><div style="font-size:.68rem;color:#166534;margin-top:2px">All Holes</div><span style="position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:#15803d;color:#fff;font-size:.58rem;font-weight:700;padding:1px 7px;border-radius:100px;white-space:nowrap">DEFAULT</span></div>',
-//        amountFields: '<div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-cash-coin" style="color:var(--brand);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Auction Buy-in</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">Required</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Per-player buy-in for the Calcutta auction pool. All bids fund the prize pool.</p></div><div style="background:#dcfce7;border:1.5px solid #15803d;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.1rem;font-weight:800;color:#15803d">$10.00</div><div style="font-size:.6rem;color:#166534;font-weight:600;text-transform:uppercase">buy-in</div></div></div></div><div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-trophy" style="color:#7c3aed;font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Junk Pool</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">DEFAULT</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Side pool for Junk rewards during round play.</p></div><div style="background:#ede9fe;border:1.5px solid #7c3aed;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.1rem;font-weight:800;color:#7c3aed">$2.00</div><div style="font-size:.6rem;color:#7c3aed;font-weight:600;text-transform:uppercase">pool total</div></div></div></div><div style="background:#fef3e2;border:1px solid #fed7aa;border-radius:7px;padding:8px 12px;font-size:.75rem;color:#c2751a;line-height:1.55"><i class="bi bi-info-circle" style="margin-right:5px"></i>Calcutta uses an <strong>auction buy-in</strong> model. The prize pool is formed from all bids placed during the auction round.</div>',
-//        pointsFields: '<div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-flag-fill" style="color:var(--brand);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Point per Hole Win</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">Required</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Points awarded per hole won. Calcutta uses standard stroke-play scoring.</p></div><div style="background:#dcfce7;border:1.5px solid #15803d;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.2rem;font-weight:800;color:#15803d">1</div><div style="font-size:.6rem;color:#166534;font-weight:600;text-transform:uppercase">pt / hole</div></div></div></div><div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:7px;padding:8px 12px;font-size:.75rem;color:#1e40af;line-height:1.55"><i class="bi bi-info-circle" style="margin-right:5px"></i>In Calcutta, the <strong>prize pool payout</strong> is determined by auction bids — points track performance but the money follows the auction structure.</div>'
+        playTypeNote: '<strong>Calcutta</strong> — available play types: <strong>Individual</strong>, <strong>1v1</strong>, <strong>Cards</strong>. Auction-based team bidding with full 18-hole scoring.<br/><span style="font-size:.7rem;opacity:.8">Greyed-out options are not available for Calcutta.</span>',
+        holesDetail: '<div style="flex:1;background:#f1f5f2;border:1.5px solid var(--border);border-radius:7px;padding:10px 12px;text-align:center"><div style="font-size:.85rem;font-weight:800;color:var(--ink-muted)">Front 9</div><div style="font-size:.68rem;color:var(--ink-faint);margin-top:2px">Holes 1–9</div></div><div style="flex:1;background:#f1f5f2;border:1.5px solid var(--border);border-radius:7px;padding:10px 12px;text-align:center"><div style="font-size:.85rem;font-weight:800;color:var(--ink-muted)">Back 9</div><div style="font-size:.68rem;color:var(--ink-faint);margin-top:2px">Holes 10–18</div></div><div style="flex:1;background:#dcfce7;border:1.5px solid #15803d;border-radius:7px;padding:10px 12px;text-align:center;position:relative"><div style="font-size:.85rem;font-weight:800;color:#15803d">Full 18</div><div style="font-size:.68rem;color:#166534;margin-top:2px">All Holes</div><span style="position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:#15803d;color:#fff;font-size:.58rem;font-weight:700;padding:1px 7px;border-radius:100px;white-space:nowrap">DEFAULT</span></div>',
+        amountFields: '<div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-cash-coin" style="color:var(--brand);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Auction Buy-in</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">Required</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Per-player buy-in for the Calcutta auction pool. All bids fund the prize pool.</p></div><div style="background:#dcfce7;border:1.5px solid #15803d;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.1rem;font-weight:800;color:#15803d">$10.00</div><div style="font-size:.6rem;color:#166534;font-weight:600;text-transform:uppercase">buy-in</div></div></div></div><div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-trophy" style="color:#7c3aed;font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Junk Pool</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">DEFAULT</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Side pool for Junk rewards during round play.</p></div><div style="background:#ede9fe;border:1.5px solid #7c3aed;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.1rem;font-weight:800;color:#7c3aed">$2.00</div><div style="font-size:.6rem;color:#7c3aed;font-weight:600;text-transform:uppercase">pool total</div></div></div></div><div style="background:#fef3e2;border:1px solid #fed7aa;border-radius:7px;padding:8px 12px;font-size:.75rem;color:#c2751a;line-height:1.55"><i class="bi bi-info-circle" style="margin-right:5px"></i>Calcutta uses an <strong>auction buy-in</strong> model. The prize pool is formed from all bids placed during the auction round.</div>',
+        pointsFields: '<div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-flag-fill" style="color:var(--brand);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Point per Hole Win</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">Required</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Points awarded per hole won. Calcutta uses standard stroke-play scoring.</p></div><div style="background:#dcfce7;border:1.5px solid #15803d;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.2rem;font-weight:800;color:#15803d">1</div><div style="font-size:.6rem;color:#166534;font-weight:600;text-transform:uppercase">pt / hole</div></div></div></div><div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:7px;padding:8px 12px;font-size:.75rem;color:#1e40af;line-height:1.55"><i class="bi bi-info-circle" style="margin-right:5px"></i>In Calcutta, the <strong>prize pool payout</strong> is determined by auction bids — points track performance but the money follows the auction structure.</div>',
        /* add score flow */
             addScoreTitle1:`Enter player scores across the 18-hole grid — 12 steps.`,
             addScoreTitle2:`Score Entry Flow — 9 Steps`,
@@ -689,6 +698,11 @@
         img8:  'images/progressive_skins_image/gameCreatedSuccessfully.png',
         img9:  'images/progressive_skins_image/gameOverview.png',
         img10:  'images/progressive_skins_image/addBetsScreen.png',
+        img11:  'images/progressive_skins_image/allPlayersResult.png',
+        img12:  'images/progressive_skins_image/foursomeTab.png',
+        img13:  'images/progressive_skins_image/foursomeScorecard.png',
+        img14:  'images/progressive_skins_image/foursomeWinners.png',
+        img15:  'images/progressive_skins_image/ledgerPageView.png',
         playTypeBadges: [
           {label:'Individual ✓',active:true},{label:'Modified Stableford',active:false},
           {label:'COD',active:false},{label:'2v2',active:false},{label:'Random',active:false},
@@ -786,10 +800,407 @@
                                         <div class="action-card"><div class="action-icon"><i class="bi bi-people-fill"></i></div><div><div class="action-title">1. Add Across Foursome Team</div><div class="action-desc">Create or select Across Foursome Teams for the game. Teams are formed based on the selected tee sheet. Use existing teams or create new ones.</div></div></div>
                                         <div class="action-card"><div class="action-icon"><i class="bi bi-eye"></i></div><div><div class="action-title">2. View Game</div><div class="action-desc">Opens the Game Details screen with access to Overview, Results, Ledger, Add Score, and Add Bets tabs.</div></div></div>
                                         <div class="action-card"><div class="action-icon"><i class="bi bi-calendar-plus"></i></div><div><div class="action-title">3. Create Game for Another Day</div><div class="action-desc">Create another game within the same event using the same tee sheet or a new one.</div></div></div>`,
-//        playTypeNote: '<strong>Progressive Skins</strong> — available play types: <strong>Individual</strong>. Skins carry over on ties until a hole is won outright.<br/><span style="font-size:.7rem;opacity:.8">Greyed-out options are not available for Progressive Skins.</span>',
-//        holesDetail: '<div style="flex:1;background:#dcfce7;border:1.5px solid #15803d;border-radius:7px;padding:10px 12px;text-align:center;position:relative"><div style="font-size:.85rem;font-weight:800;color:#15803d">Full 18</div><div style="font-size:.68rem;color:#166534;margin-top:2px">All Holes</div><span style="position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:#15803d;color:#fff;font-size:.58rem;font-weight:700;padding:1px 7px;border-radius:100px;white-space:nowrap">DEFAULT</span></div><div style="flex:1;background:#f1f5f2;border:1.5px solid var(--border);border-radius:7px;padding:10px 12px;text-align:center"><div style="font-size:.85rem;font-weight:800;color:var(--ink-muted)">Front 9</div><div style="font-size:.68rem;color:var(--ink-faint);margin-top:2px">Holes 1–9</div></div>',
-//        amountFields: '<div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-cash-coin" style="color:var(--brand);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Skin Value</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">Required</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Dollar value of each skin. If a hole is tied, the skin carries over and <strong>accumulates</strong> to the next hole.</p></div><div style="background:#dcfce7;border:1.5px solid #15803d;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.1rem;font-weight:800;color:#15803d">$5.00</div><div style="font-size:.6rem;color:#166534;font-weight:600;text-transform:uppercase">per skin</div></div></div></div><div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-stars" style="color:var(--accent);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Skode Pool</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">DEFAULT</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Total pool for Skode side events alongside the skins game.</p></div><div style="background:#fef3e2;border:1.5px solid var(--accent);border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.1rem;font-weight:800;color:var(--accent)">$5.00</div><div style="font-size:.6rem;color:var(--accent);font-weight:600;text-transform:uppercase">pool total</div></div></div></div><div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:7px;padding:8px 12px;font-size:.75rem;color:#166534;line-height:1.55"><i class="bi bi-arrow-repeat" style="margin-right:5px"></i>In Progressive Skins, <strong>carried-over skins accumulate</strong> — a tied hole rolls its value to the next, creating big payouts when a streak is finally broken.</div>',
-//        pointsFields: '<div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-flag-fill" style="color:var(--brand);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Skin Win = 1 Point</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">Required</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Each skin won counts as 1 point on the leaderboard. Carried-over skins still count as 1 win.</p></div><div style="background:#dcfce7;border:1.5px solid #15803d;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.2rem;font-weight:800;color:#15803d">1</div><div style="font-size:.6rem;color:#166534;font-weight:600;text-transform:uppercase">pt / skin</div></div></div></div><div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:7px;padding:8px 12px;font-size:.75rem;color:#166534;line-height:1.55"><i class="bi bi-info-circle" style="margin-right:5px"></i>Progressive Skins tracks wins per hole — the player with the <strong>most skins won</strong> leads the leaderboard regardless of carry-over amounts.</div>'
+        playTypeNote: '<strong>Progressive Skins</strong> — available play types: <strong>Individual</strong>. Skins carry over on ties until a hole is won outright.<br/><span style="font-size:.7rem;opacity:.8">Greyed-out options are not available for Progressive Skins.</span>',
+        holesDetail: '<div style="flex:1;background:#dcfce7;border:1.5px solid #15803d;border-radius:7px;padding:10px 12px;text-align:center;position:relative"><div style="font-size:.85rem;font-weight:800;color:#15803d">Full 18</div><div style="font-size:.68rem;color:#166534;margin-top:2px">All Holes</div><span style="position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:#15803d;color:#fff;font-size:.58rem;font-weight:700;padding:1px 7px;border-radius:100px;white-space:nowrap">DEFAULT</span></div><div style="flex:1;background:#f1f5f2;border:1.5px solid var(--border);border-radius:7px;padding:10px 12px;text-align:center"><div style="font-size:.85rem;font-weight:800;color:var(--ink-muted)">Front 9</div><div style="font-size:.68rem;color:var(--ink-faint);margin-top:2px">Holes 1–9</div></div>',
+        amountFields: '<div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-cash-coin" style="color:var(--brand);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Skin Value</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">Required</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Dollar value of each skin. If a hole is tied, the skin carries over and <strong>accumulates</strong> to the next hole.</p></div><div style="background:#dcfce7;border:1.5px solid #15803d;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.1rem;font-weight:800;color:#15803d">$5.00</div><div style="font-size:.6rem;color:#166534;font-weight:600;text-transform:uppercase">per skin</div></div></div></div><div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-stars" style="color:var(--accent);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Skode Pool</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">DEFAULT</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Total pool for Skode side events alongside the skins game.</p></div><div style="background:#fef3e2;border:1.5px solid var(--accent);border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.1rem;font-weight:800;color:var(--accent)">$5.00</div><div style="font-size:.6rem;color:var(--accent);font-weight:600;text-transform:uppercase">pool total</div></div></div></div><div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:7px;padding:8px 12px;font-size:.75rem;color:#166534;line-height:1.55"><i class="bi bi-arrow-repeat" style="margin-right:5px"></i>In Progressive Skins, <strong>carried-over skins accumulate</strong> — a tied hole rolls its value to the next, creating big payouts when a streak is finally broken.</div>',
+        pointsFields: '<div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-flag-fill" style="color:var(--brand);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Skin Win = 1 Point</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">Required</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Each skin won counts as 1 point on the leaderboard. Carried-over skins still count as 1 win.</p></div><div style="background:#dcfce7;border:1.5px solid #15803d;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.2rem;font-weight:800;color:#15803d">1</div><div style="font-size:.6rem;color:#166534;font-weight:600;text-transform:uppercase">pt / skin</div></div></div></div><div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:7px;padding:8px 12px;font-size:.75rem;color:#166534;line-height:1.55"><i class="bi bi-info-circle" style="margin-right:5px"></i>Progressive Skins tracks wins per hole — the player with the <strong>most skins won</strong> leads the leaderboard regardless of carry-over amounts.</div>',
+       /* add score flow */
+            addScoreTitle1:`Enter player scores across the 18-hole grid — 9 steps.`,
+            addScoreTitle2:`Score Entry Flow — 9 Steps`,
+            addScoreSteper:`<div class="wizard-stepper" id="asTabs" style="margin-bottom:16px">
+                                            <div class="wstep active" onclick="asGoTo(0)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-people"></i></span></div><div class="wstep-label">Select Foursome</div></div>
+                                            <div class="wstep" onclick="asGoTo(1)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-sliders"></i></span></div><div class="wstep-label">Foursome Settings</div></div>
+                                            <div class="wstep" onclick="asGoTo(2)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-clipboard2-plus"></i></span></div><div class="wstep-label">Add Score</div></div>
+                                            <div class="wstep" onclick="asGoTo(3)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-grid-3x3"></i></span></div><div class="wstep-label">Holes Grid</div></div>
+                                            <div class="wstep" onclick="asGoTo(4)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-pencil-square"></i></span></div><div class="wstep-label">Scorecard</div></div>
+                                            <div class="wstep" onclick="asGoTo(5)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-stars"></i></span></div><div class="wstep-label">Skode &amp; Junk</div></div>
+                                            <div class="wstep" onclick="asGoTo(6)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-check2-all"></i></span></div><div class="wstep-label">Leaderboard</div></div>
+                                            <div class="wstep" onclick="asGoTo(7)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-bar-chart-line"></i></span></div><div class="wstep-label">Results</div></div>
+                                            <div class="wstep" onclick="asGoTo(8)"><div class="wstep-circle"><span class="wstep-icon"><i class="bi bi-trophy"></i></span></div><div class="wstep-label">All Holes Done</div></div>
+                                          </div>`,
+            showAddScoreMatchSlide123:`<div class="wizard-slide active" id="asslide-0">
+                                                 <div class="wizard-slide-info">
+                                                   <div class="wsi-num">01</div>
+                                                   <div class="wsi-body">
+                                                     <div class="wsi-title">Select Foursome</div>
+                                                     <div class="wsi-desc">Tap <strong>Add Score</strong> from the Overview Tab. You will be redirected to the <strong>Select Foursome</strong> screen. A list of available foursomes is displayed — tap your desired foursome to proceed.</div>
+                                                   </div>
+                                                   <div class="wsi-icon"><i class="bi bi-people"></i></div>
+                                                 </div>
+                                                 <div class="wizard-slide-img"><div class="image-placeholder">
+                                                   <img src="images/selectFoursome.png" alt="Select Foursome" class="app-image" />
+                                                 </div></div>
+                                                 <div class="wizard-nav">
+                                                   <span></span>
+                                                   <div class="wizard-progress-dots" id="asdots-0"></div>
+                                                   <button class="wizard-nav-btn primary" onclick="asGoTo(1)"><i class="bi bi-arrow-right"></i> Next: Foursome Settings</button>
+                                                 </div>
+                                               </div>
+
+                                               <div class="wizard-slide" id="asslide-1">
+                                                 <div class="wizard-slide-info">
+                                                   <div class="wsi-num">02</div>
+                                                   <div class="wsi-body">
+                                                     <div class="wsi-title">Foursome Settings (Bottom Sheet)</div>
+                                                     <div class="wsi-desc">A <strong>bottom sheet</strong> slides up showing the foursome configuration options. Fill in the required settings for your foursome, then tap <strong>Confirm</strong> or <strong>Done</strong> to proceed.</div>
+                                                   </div>
+                                                   <div class="wsi-icon"><i class="bi bi-sliders"></i></div>
+                                                 </div>
+                                                 <div class="wizard-slide-img"><div class="image-placeholder">
+                                                   <img src="images/foursomeSettingsBottomSheet.png" alt="Foursome Settings (Bottom Sheet)" class="app-image" />
+                                                 </div></div>
+                                                 <div class="wizard-nav">
+                                                   <button class="wizard-nav-btn" onclick="asGoTo(0)"><i class="bi bi-arrow-left"></i> Back</button>
+                                                   <div class="wizard-progress-dots" id="asdots-1"></div>
+                                                   <button class="wizard-nav-btn primary" onclick="asGoTo(2)"><i class="bi bi-arrow-right"></i> Next: Add Score</button>
+                                                 </div>
+                                               </div>
+
+                                               <div class="wizard-slide" id="asslide-2">
+                                                 <div class="wizard-slide-info">
+                                                   <div class="wsi-num">03</div>
+                                                   <div class="wsi-body">
+                                                     <div class="wsi-title">Tap Add Score</div>
+                                                     <div class="wsi-desc">After selecting your foursome, you will see the foursome detail screen. Tap the <strong>Add Score</strong> button to continue to foursome settings.</div>
+                                                   </div>
+                                                   <div class="wsi-icon"><i class="bi bi-clipboard2-plus"></i></div>
+                                                 </div>
+                                                 <div class="wizard-slide-img"><div class="image-placeholder">
+                                                   <img src="images/progressive_skins_image/tapAddScore.png" alt="Tap Add Score" class="app-image" />
+                                                 </div></div>
+                                                 <div class="wizard-nav">
+                                                   <button class="wizard-nav-btn" onclick="asGoTo(1)"><i class="bi bi-arrow-left"></i> Back</button>
+                                                   <div class="wizard-progress-dots" id="asdots-2"></div>
+                                                   <button class="wizard-nav-btn primary" onclick="asGoTo(3)"><i class="bi bi-arrow-right"></i> Next: Holes Grid</button>
+                                                 </div>
+                                               </div>
+
+                                               <div class="wizard-slide" id="asslide-3">
+                                                 <div class="wizard-slide-info">
+                                                   <div class="wsi-num">04</div>
+                                                   <div class="wsi-body">
+                                                     <div class="wsi-title">18-Hole Score Grid</div>
+                                                     <div class="wsi-desc">The full <strong>18-hole score grid</strong> opens showing all players in your foursome. Each row is a player, each column is a hole. Tap any <strong>hole number</strong> to start entering scores for that hole.</div>
+                                                   </div>
+                                                   <div class="wsi-icon"><i class="bi bi-grid-3x3"></i></div>
+                                                 </div>
+                                                 <div class="wizard-slide-img"><div class="image-placeholder">
+                                                   <img src="images/progressive_skins_image/18-HoleScoreGrid.png" alt="18-Hole Score Grid" class="app-image" />
+                                                 </div></div>
+                                                 <div class="wizard-nav">
+                                                   <button class="wizard-nav-btn" onclick="asGoTo(2)"><i class="bi bi-arrow-left"></i> Back</button>
+                                                   <div class="wizard-progress-dots" id="asdots-3"></div>
+                                                   <button class="wizard-nav-btn primary" onclick="asGoTo(4)"><i class="bi bi-arrow-right"></i> Next: Scorecard</button>
+                                                 </div>
+                                               </div>
+
+                                               <div class="wizard-slide" id="asslide-4">
+                                                 <div class="wizard-slide-info">
+                                                   <div class="wsi-num">05</div>
+                                                   <div class="wsi-body">
+                                                     <div class="wsi-title">Scorecard — Enter &amp; Save Score</div>
+                                                     <div class="wsi-desc">The <strong>Scorecard tab</strong> opens for the selected hole. Enter the score for each player, then tap <strong>Save</strong> or <strong>Next</strong> to move to the following hole. Repeat for every hole.</div>
+                                                   </div>
+                                                   <div class="wsi-icon"><i class="bi bi-pencil-square"></i></div>
+                                                 </div>
+                                                 <div class="wizard-slide-img"><div class="image-placeholder">
+                                                   <img src="images/scoreEntryScreen.png" alt="Scorecard — Enter &amp; Save Score" class="app-image" />
+                                                 </div></div>
+                                                 <div class="wizard-nav">
+                                                   <button class="wizard-nav-btn" onclick="asGoTo(3)"><i class="bi bi-arrow-left"></i> Back</button>
+                                                   <div class="wizard-progress-dots" id="asdots-4"></div>
+                                                   <button class="wizard-nav-btn primary" onclick="asGoTo(5)"><i class="bi bi-arrow-right"></i> Next: Skode & Junk</button>
+                                                 </div>
+                                               </div>
+
+                                               <div class="wizard-slide" id="asslide-5">
+                                                 <div class="wizard-slide-info">
+                                                   <div class="wsi-num">06</div>
+                                                   <div class="wsi-body">
+                                                     <div class="wsi-title">Skode &amp; Junk Rewards</div>
+                                                     <div class="wsi-desc">
+                                                       After saving a hole score, the <strong>Skode &amp; Junk</strong> section becomes available — these are <strong>side reward events</strong> that run alongside your main game score.
+
+                                                       <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
+
+                                                         <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;overflow:hidden">
+                                                           <div style="padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:default">
+                                                             <span style="width:26px;height:26px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">1</span>
+                                                             <span style="font-size:.85rem;font-weight:700;color:#0f172a">Open the Accordion</span>
+                                                             <i class="bi bi-chevron-down" style="margin-left:auto;color:#64748b;font-size:12px"></i>
+                                                           </div>
+                                                           <div style="padding:0 14px 10px 50px;font-size:.8rem;color:#475569;line-height:1.6">
+                                                             Tap the <strong>accordion</strong>  to expand it. You will see the available reward categories: <strong>Skode</strong>, <strong>Junk</strong>, <strong>Putts</strong>, <strong>Closest To Pin</strong>, <strong>Longest Drive</strong>, and <strong>Fairways</strong>.
+                                                           </div>
+
+                                                         </div>
+
+                                                         <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;overflow:hidden">
+                                                           <div style="padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:default">
+                                                             <span style="width:26px;height:26px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">2</span>
+                                                             <span style="font-size:.85rem;font-weight:700;color:#0f172a">Tap a Reward Category</span>
+                                                             <i class="bi bi-chevron-down" style="margin-left:auto;color:#64748b;font-size:12px"></i>
+                                                           </div>
+                                                           <div style="padding:0 14px 10px 50px;font-size:.8rem;color:#475569;line-height:1.6">
+                                                             Tap on any category — <strong>Skode</strong>, <strong>Junk</strong>
+                                                             — to open the <strong>Add Skode &amp; Junk pop-up</strong>.
+                                                           </div>
+                                                         </div>
+
+                                                         <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;overflow:hidden">
+                                                           <div style="padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:default">
+                                                             <span style="width:26px;height:26px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">3</span>
+                                                             <span style="font-size:.85rem;font-weight:700;color:#0f172a">Add Skode / Junk in Pop-up</span>
+                                                             <i class="bi bi-chevron-down" style="margin-left:auto;color:#64748b;font-size:12px"></i>
+                                                           </div>
+                                                           <div style="padding:0 14px 10px 50px;font-size:.8rem;color:#475569;line-height:1.6">
+                                                             In the pop-up, assign the reward based on the outcome:
+                                                             <div style="display:flex;flex-direction:column;gap:5px;margin-top:6px">
+                                                               <div style="display:flex;align-items:center;gap:8px">
+                                                                 <span style="background:#dcfce7;color:#16a34a;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:99px;flex-shrink:0">MADE</span>
+                                                                 <span>Player successfully completed the reward condition (e.g., made the putt, hit the fairway).</span>
+                                                               </div>
+                                                               <div style="display:flex;align-items:center;gap:8px">
+                                                                 <span style="background:#fee2e2;color:#dc2626;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:99px;flex-shrink:0">MISSED</span>
+                                                                 <span>Player attempted but did not meet the reward condition.</span>
+                                                               </div>
+                                                               <div style="display:flex;align-items:center;gap:8px">
+                                                                 <span style="background:#fef3e2;color:#e8a020;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:99px;flex-shrink:0">EARNED</span>
+                                                                 <span>Player earned the reward event (e.g., birdie, closest to pin, longest drive).</span>
+                                                               </div>
+                                                             </div>
+                                                           </div>
+                                                         </div>
+
+                                                         <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;overflow:hidden">
+                                                           <div style="padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:default">
+                                                             <span style="width:26px;height:26px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">4</span>
+                                                             <span style="font-size:.85rem;font-weight:700;color:#0f172a">Saved to Ledger</span>
+                                                             <i class="bi bi-chevron-down" style="margin-left:auto;color:#64748b;font-size:12px"></i>
+                                                           </div>
+                                                           <div style="padding:0 14px 10px 50px;font-size:.8rem;color:#475569;line-height:1.6">
+                                                             Once assigned, the reward is saved and <strong>feeds directly into the Ledger</strong> and payout calculations automatically.
+                                                           </div>
+                                                         </div>
+
+                                                       </div>
+                                                     </div>
+                                                   </div>
+                                                   <div class="wsi-icon"><i class="bi bi-stars"></i></div>
+                                                 </div>
+                                                 <div class="wizard-slide-img"><div class="image-placeholder">
+                                                   <img src="images/skode&JunkRewards.png" alt="Skode &amp; Junk Rewards" class="app-image" />
+                                                 </div></div>
+                                                 <div class="wizard-nav">
+                                                   <button class="wizard-nav-btn" onclick="asGoTo(4)"><i class="bi bi-arrow-left"></i> Back</button>
+                                                   <div class="wizard-progress-dots" id="asdots-5"></div>
+                                                   <button class="wizard-nav-btn primary" onclick="asGoTo(6)"><i class="bi bi-arrow-right"></i> Next: All Holes Done</button>
+                                                 </div>
+                                               </div>
+
+                                               <div class="wizard-slide" id="asslide-6">
+                                                 <div class="wizard-slide-info">
+                                                   <div class="wsi-num">07</div>
+                                                   <div class="wsi-body">
+                                                     <div class="wsi-title">Leaderboard</div>
+                                                     <div class="wsi-desc">The <strong>Leaderboard</strong> displays the final standings for all foursomes in the game — including net scores, Skode &amp; Junk rewards, and overall rankings. All bet outcomes are reflected in the <strong>Results Tab</strong>.</div>
+                                                   </div>
+                                                   <div class="wsi-icon"><i class="bi bi-trophy"></i></div>
+                                                 </div>
+                                                 <div class="wizard-slide-img"><div class="image-placeholder">
+                                                   <img src="images/leaderboard.png" alt="Final Leaderboard" class="app-image" />
+                                                 </div></div>
+                                                 <div class="wizard-nav">
+                                                   <button class="wizard-nav-btn" onclick="asGoTo(5)"><i class="bi bi-arrow-left"></i> Back</button>
+                                                   <div class="wizard-progress-dots" id="asdots-6"></div>
+                                                   <button class="wizard-nav-btn primary" onclick="asGoTo(7)"><i class="bi bi-arrow-right"></i> Next: Results</button>
+                                                 </div>
+                                               </div>
+
+                                               <div class="wizard-slide" id="asslide-7">
+                                                 <div class="wizard-slide-info">
+                                                   <div class="wsi-num">08</div>
+                                                   <div class="wsi-body">
+                                                     <div class="wsi-title">View Results Tab</div>
+                                                     <div class="wsi-desc">Navigate to the <strong>Results Tab</strong> from the Game Details screen. Here you can view your foursome's <strong>standings, net scores, and rankings</strong> updated in real time after each score entry.</div>
+                                                   </div>
+                                                   <div class="wsi-icon"><i class="bi bi-bar-chart-line"></i></div>
+                                                 </div>
+                                                 <div class="wizard-slide-img"><div class="image-placeholder">
+                                                   <img src="images/viewAddScoreResultsTab.png" alt="View Results Tab" class="app-image" />
+                                                 </div></div>
+                                                 <div class="wizard-nav">
+                                                   <button class="wizard-nav-btn" onclick="asGoTo(6)"><i class="bi bi-arrow-left"></i> Back</button>
+                                                   <div class="wizard-progress-dots" id="asdots-7"></div>
+                                                   <button class="wizard-nav-btn primary" onclick="asGoTo(8)"><i class="bi bi-arrow-right"></i> Next: Leaderboard</button>
+                                                 </div>
+                                               </div>
+
+                                               <div class="wizard-slide" id="asslide-8">
+                                                 <div class="wizard-slide-info">
+                                                   <div class="wsi-num">09</div>
+                                                   <div class="wsi-body">
+                                                     <div class="wsi-title">All Holes Score Added</div>
+                                                     <div class="wsi-desc">
+                                                       Once scores have been entered for all 18 holes, the score grid shows a <strong>green ✓ tick on every hole</strong> — confirming all scores are recorded. Totals and net scores are automatically calculated. Here's what happens next:
+
+                                                       <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px">
+
+                                                         <div style="display:flex;align-items:flex-start;gap:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:12px 14px">
+                                                           <span style="width:28px;height:28px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;margin-top:1px">✓</span>
+                                                           <div>
+                                                             <div style="font-size:.85rem;font-weight:700;color:#0f172a;margin-bottom:3px">Green Tick on All 18 Holes</div>
+                                                             <div style="font-size:.78rem;color:#475569;line-height:1.55">Every hole cell in the score grid displays a <strong>green tick</strong> confirming the score has been saved. Total and net scores are shown at the bottom of the grid.</div>
+                                                           </div>
+                                                         </div>
+
+                                                         <div style="display:flex;align-items:flex-start;gap:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:12px 14px">
+                                                           <span style="width:28px;height:28px;background:#15803d;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;margin-top:1px">2</span>
+                                                           <div>
+                                                             <div style="font-size:.85rem;font-weight:700;color:#0f172a;margin-bottom:3px">Tap "Finish Foursome"</div>
+                                                             <div style="font-size:.78rem;color:#475569;line-height:1.55">Once all holes are marked complete, tap the <strong>Finish Foursome</strong> button to finalise the scoring session for your group.</div>
+                                                           </div>
+                                                         </div>
+
+                                                         <div style="display:flex;align-items:flex-start;gap:12px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:12px 14px">
+                                                           <span style="width:28px;height:28px;background:#2563eb;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;margin-top:1px">→</span>
+                                                           <div>
+                                                             <div style="font-size:.85rem;font-weight:700;color:#0f172a;margin-bottom:3px">Redirected to Game Details → Results Tab</div>
+                                                             <div style="font-size:.78rem;color:#475569;line-height:1.55">You are automatically redirected to the <strong>Game Details screen</strong>, landing on the <strong>Results Tab → All Players</strong> view — showing the complete standings, net scores, and rankings for everyone in the game.</div>
+                                                           </div>
+                                                         </div>
+
+                                                       </div>
+                                                     </div>
+                                                   </div>
+                                                   <div class="wsi-icon"><i class="bi bi-check2-all"></i></div>
+                                                 </div>
+                                                 <div class="wizard-slide-img"><div class="image-placeholder">
+                                                   <img src="images/allHolesScoreAdded.png" alt="All Holes Score Added" class="app-image" />
+                                                 </div></div>
+                                                 <div class="wizard-nav">
+                                                   <button class="wizard-nav-btn" onclick="asGoTo(7)"><i class="bi bi-arrow-left"></i> Back</button>
+                                                   <div class="wizard-progress-dots" id="asdots-8"></div>
+                                                   <span style="font-size:.8rem;color:var(&#45;&#45;ink-faint)">&#10003; Scoring Complete!</span>
+                                                 </div>
+                                               </div>`,
+      },
+      'regular_skins': {
+        name: 'Regular Skins',
+        img3:  'images/regular_skins_image/setGameNameAndGameType.png',
+        img4:  'images/progressive_skins_image/setMatchDetails.png',
+        img5:  'images/progressive_skins_image/setPerMatchHoles.png',
+        img6:  'images/progressive_skins_image/setAmountforEach.png',
+        img7:  'images/progressive_skins_image/setPoints.png',
+        img8:  'images/progressive_skins_image/gameCreatedSuccessfully.png',
+        img9:  'images/progressive_skins_image/gameOverview.png',
+        img10:  'images/progressive_skins_image/addBetsScreen.png',
+        img11:  'images/progressive_skins_image/allPlayersResult.png',
+        img12:  'images/progressive_skins_image/foursomeTab.png',
+        img13:  'images/progressive_skins_image/foursomeScorecard.png',
+        img14:  'images/progressive_skins_image/foursomeWinners.png',
+        img15:  'images/progressive_skins_image/ledgerPageView.png',
+        playTypeBadges: [
+          {label:'Individual ✓',active:true},{label:'Modified Stableford',active:false},
+          {label:'COD',active:false},{label:'2v2',active:false},{label:'Random',active:false},
+          {label:'4v4',active:false},{label:'Cards',active:false},{label:'Ultra Vegas',active:false},{label:'1v1',active:false}
+        ],
+        holesDesc:`<div style="background:var(&#45;&#45;bg);border:1px solid var(&#45;&#45;border);border-radius:8px;padding:12px 14px">
+                                                        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                                                          <span style="background:var(&#45;&#45;brand);color:#fff;font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase">Required</span>
+                                                          <span style="font-size:.88rem;font-weight:700;color:var(&#45;&#45;ink)">Holes per Match</span>
+                                                        </div>
+                                                        <div style="display:flex;gap:8px;flex-wrap:wrap">
+                                                          <div style="flex:1;background:#dcfce7;border:1.5px solid #15803d;border-radius:7px;padding:10px 12px;text-align:center;position:relative">
+                                                            <div style="font-size:.75rem;font-weight:800;color:#15803d">Front 9</div>
+                                                            <div style="font-size:.68rem;color:#166534;margin-top:2px">Holes 1–9</div>
+                                                            <span style="position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:#15803d;color:#fff;font-size:.58rem;font-weight:700;padding:1px 7px;border-radius:100px;white-space:nowrap;letter-spacing:.04em">DEFAULT</span>
+                                                          </div>
+                                                          <div style="flex:1;background:#dcfce7;border:1.5px solid #15803d;border-radius:7px;padding:10px 12px;text-align:center;position:relative">
+                                                            <div style="font-size:.75rem;font-weight:800;color:#15803d">Back 9</div>
+                                                            <div style="font-size:.68rem;color:#166534;margin-top:2px">Holes 10–18</div>
+                                                            <span style="position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:#15803d;color:#fff;font-size:.58rem;font-weight:700;padding:1px 7px;border-radius:100px;white-space:nowrap;letter-spacing:.04em">DEFAULT</span>
+                                                          </div>
+                                                          <div style="flex:1;background:#dcfce7;border:1.5px solid #15803d;border-radius:7px;padding:10px 12px;text-align:center;position:relative">
+                                                            <div style="font-size:.75rem;font-weight:800;color:#15803d">Total 18</div>
+                                                            <div style="font-size:.68rem;color:#166534;margin-top:2px">All Holes</div>
+                                                            <span style="position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:#15803d;color:#fff;font-size:.58rem;font-weight:700;padding:1px 7px;border-radius:100px;white-space:nowrap;letter-spacing:.04em">DEFAULT</span>
+                                                          </div>
+                                                        </div>
+                                                        <p style="font-size:.74rem;color:var(&#45;&#45;ink-faint);margin-top:7px;line-height:1.5">The default selection is <strong>Front 9</strong>, <strong>Back 9</strong> and <strong>Total 18</strong>. You can change this if needed before proceeding.</p>
+                                                      </div>`,
+        amountForEach: `<div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px">
+                                                 <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+                                                   <div>
+                                                     <div style="display:flex;align-items:center;gap:7px;margin-bottom:4px">
+                                                       <i class="bi bi-stars" style="color:var(--accent);font-size:.9rem"></i>
+                                                       <span style="font-size:.88rem;font-weight:700;color:var(--ink)">Skode Pool</span>
+                                                       <span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px;letter-spacing:.04em">DEFAULT</span>
+                                                     </div>
+                                                     <p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">The total pool contributed for Skode side rewards. Pre-filled by default — change if required.</p>
+                                                   </div>
+                                                   <div style="background:#fef3e2;border:1.5px solid var(--accent);border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0">
+                                                     <div style="font-size:1.1rem;font-weight:800;color:var(--accent);font-family:var(--font-alt)">$5.00</div>
+                                                     <div style="font-size:.6rem;color:var(--accent);font-weight:600;letter-spacing:.04em;text-transform:uppercase">pool total</div>
+                                                   </div>
+                                                 </div>
+                                               </div>
+
+                                               <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px">
+                                                 <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+                                                   <div>
+                                                     <div style="display:flex;align-items:center;gap:7px;margin-bottom:4px">
+                                                       <i class="bi bi-trophy" style="color:#7c3aed;font-size:.9rem"></i>
+                                                       <span style="font-size:.88rem;font-weight:700;color:var(--ink)">Junk Pool</span>
+                                                       <span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px;letter-spacing:.04em">DEFAULT</span>
+                                                     </div>
+                                                     <p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">The total pool contributed for Junk side rewards. Pre-filled by default — change if required.</p>
+                                                   </div>
+                                                   <div style="background:#ede9fe;border:1.5px solid #7c3aed;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0">
+                                                     <div style="font-size:1.1rem;font-weight:800;color:#7c3aed;font-family:var(--font-alt)">$2.00</div>
+                                                     <div style="font-size:.6rem;color:#7c3aed;font-weight:600;letter-spacing:.04em;text-transform:uppercase">pool total</div>
+                                                   </div>
+                                                 </div>
+                                               </div>
+
+                                               <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:7px;padding:8px 12px;font-size:.75rem;color:#1e40af;line-height:1.55">
+                                                 <i class="bi bi-info-circle" style="margin-right:5px"></i>
+                                                 All three values are <strong>pre-filled with default amounts</strong>. You can tap any field to edit the value before proceeding.
+                                               </div>`,
+        setPointsScreen: `<div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px">
+                                                      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+                                                        <div>
+                                                          <div style="display:flex;align-items:center;gap:7px;margin-bottom:4px">
+                                                            <i class="bi bi-star-fill" style="color:#2563eb;font-size:.9rem"></i>
+                                                            <span style="font-size:.88rem;font-weight:700;color:var(--ink)">$ Per Skin</span>
+                                                            <span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px;letter-spacing:.04em">Required</span>
+                                                          </div>
+                                                          <p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">
+                                                            Dollar amount awarded for each <strong>skin won during the round</strong>. Pre-filled — edit if needed.
+                                                          </p>
+                                                        </div>
+
+                                                        <div style="background:#dbeafe;border:1.5px solid #2563eb;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0">
+                                                          <div style="font-size:1.2rem;font-weight:800;color:#2563eb;font-family:var(--font-alt)">0.50</div>
+                                                          <div style="font-size:.6rem;color:#1d4ed8;font-weight:600;letter-spacing:.04em;text-transform:uppercase">
+                                                            $ / skin
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:7px;padding:8px 12px;font-size:.75rem;color:#1e40af;line-height:1.55">
+                                                    <i class="bi bi-info-circle" style="margin-right:5px"></i>
+                                                    The field(s) are <strong>pre-filled with default skin value(s)</strong>. Tap any field to update before proceeding.
+                                                  </div>`,
+        gameCreatedTitle:`A confirmation screen appears indicating the game has been created. You now have three options: <strong>Add Across Foursome Team</strong>, <strong>View Game</strong>, or <strong>Create Game for Another Day</strong>.`,
+        gameCreatedFooter :`<h4 class="card-heading">After Game Creation — 3 Options</h4>
+                                        <div class="action-card"><div class="action-icon"><i class="bi bi-people-fill"></i></div><div><div class="action-title">1. Add Across Foursome Team</div><div class="action-desc">Create or select Across Foursome Teams for the game. Teams are formed based on the selected tee sheet. Use existing teams or create new ones.</div></div></div>
+                                        <div class="action-card"><div class="action-icon"><i class="bi bi-eye"></i></div><div><div class="action-title">2. View Game</div><div class="action-desc">Opens the Game Details screen with access to Overview, Results, Ledger, Add Score, and Add Bets tabs.</div></div></div>
+                                        <div class="action-card"><div class="action-icon"><i class="bi bi-calendar-plus"></i></div><div><div class="action-title">3. Create Game for Another Day</div><div class="action-desc">Create another game within the same event using the same tee sheet or a new one.</div></div></div>`,
+        playTypeNote: '<strong>Progressive Skins</strong> — available play types: <strong>Individual</strong>. Skins carry over on ties until a hole is won outright.<br/><span style="font-size:.7rem;opacity:.8">Greyed-out options are not available for Progressive Skins.</span>',
+        holesDetail: '<div style="flex:1;background:#dcfce7;border:1.5px solid #15803d;border-radius:7px;padding:10px 12px;text-align:center;position:relative"><div style="font-size:.85rem;font-weight:800;color:#15803d">Full 18</div><div style="font-size:.68rem;color:#166534;margin-top:2px">All Holes</div><span style="position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:#15803d;color:#fff;font-size:.58rem;font-weight:700;padding:1px 7px;border-radius:100px;white-space:nowrap">DEFAULT</span></div><div style="flex:1;background:#f1f5f2;border:1.5px solid var(--border);border-radius:7px;padding:10px 12px;text-align:center"><div style="font-size:.85rem;font-weight:800;color:var(--ink-muted)">Front 9</div><div style="font-size:.68rem;color:var(--ink-faint);margin-top:2px">Holes 1–9</div></div>',
+        amountFields: '<div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-cash-coin" style="color:var(--brand);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Skin Value</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">Required</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Dollar value of each skin. If a hole is tied, the skin carries over and <strong>accumulates</strong> to the next hole.</p></div><div style="background:#dcfce7;border:1.5px solid #15803d;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.1rem;font-weight:800;color:#15803d">$5.00</div><div style="font-size:.6rem;color:#166534;font-weight:600;text-transform:uppercase">per skin</div></div></div></div><div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-stars" style="color:var(--accent);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Skode Pool</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">DEFAULT</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Total pool for Skode side events alongside the skins game.</p></div><div style="background:#fef3e2;border:1.5px solid var(--accent);border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.1rem;font-weight:800;color:var(--accent)">$5.00</div><div style="font-size:.6rem;color:var(--accent);font-weight:600;text-transform:uppercase">pool total</div></div></div></div><div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:7px;padding:8px 12px;font-size:.75rem;color:#166534;line-height:1.55"><i class="bi bi-arrow-repeat" style="margin-right:5px"></i>In Progressive Skins, <strong>carried-over skins accumulate</strong> — a tied hole rolls its value to the next, creating big payouts when a streak is finally broken.</div>',
+        pointsFields: '<div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div><div style="display:flex;align-items:center;gap:7px;margin-bottom:4px"><i class="bi bi-flag-fill" style="color:var(--brand);font-size:.9rem"></i><span style="font-size:.88rem;font-weight:700;color:var(--ink)">Skin Win = 1 Point</span><span style="background:var(--brand);color:#fff;font-size:.6rem;font-weight:700;padding:1px 7px;border-radius:4px">Required</span></div><p style="font-size:.78rem;color:var(--ink-muted);line-height:1.5;margin:0">Each skin won counts as 1 point on the leaderboard. Carried-over skins still count as 1 win.</p></div><div style="background:#dcfce7;border:1.5px solid #15803d;border-radius:8px;padding:8px 16px;text-align:center;flex-shrink:0"><div style="font-size:1.2rem;font-weight:800;color:#15803d">1</div><div style="font-size:.6rem;color:#166534;font-weight:600;text-transform:uppercase">pt / skin</div></div></div></div><div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:7px;padding:8px 12px;font-size:.75rem;color:#166534;line-height:1.55"><i class="bi bi-info-circle" style="margin-right:5px"></i>Progressive Skins tracks wins per hole — the player with the <strong>most skins won</strong> leads the leaderboard regardless of carry-over amounts.</div>',
        /* add score flow */
             addScoreTitle1:`Enter player scores across the 18-hole grid — 9 steps.`,
             addScoreTitle2:`Score Entry Flow — 9 Steps`,
@@ -1132,6 +1543,41 @@
       img7.src = addBetsScreenImage;
     }
 
+    //Show Results Screen
+    var allPlayersResultImage = GT_DATA[currentGameType].img11;
+    // Update image
+    const img8 = document.getElementById('allPlayersResultImg');
+    if (img8) {
+      img8.src = allPlayersResultImage;
+    }
+    var foursomeTabImage = GT_DATA[currentGameType].img12;
+    // Update image
+    const img9 = document.getElementById('foursomeTabImg');
+    if (img9) {
+      img9.src = foursomeTabImage;
+    }
+    var foursomeScorecardImage = GT_DATA[currentGameType].img13;
+    // Update image
+    const img10 = document.getElementById('foursomeScorecardImg');
+    if (img10) {
+      img10.src = foursomeScorecardImage;
+    }
+    var foursomeWinnersImage = GT_DATA[currentGameType].img14;
+    // Update image
+    const img11 = document.getElementById('foursomeWinnersImg');
+    if (img11) {
+      img11.src = foursomeWinnersImage;
+    }
+
+
+    //Show Leadger Screen
+    var ledgerPageViewImage = GT_DATA[currentGameType].img15;
+    // Update image
+    const img12 = document.getElementById('ledgerPageViewImg');
+    if (img12) {
+      img12.src = ledgerPageViewImage;
+    }
+
     // ── GLOBAL GAME TYPE DATA ──
     var GT_SECTIONS = {
       '321milo': {
@@ -1216,6 +1662,7 @@
       return {
         name: cfg.name,
         img3: base.img3, img4: base.img4, img6: base.img6, img7: base.img7, img9: base.img9,
+        img10: base.img10, img11: base.img11, img12: base.img12, img13: base.img13, img14: base.img14, img15: base.img15,
         playTypeBadges: buildBadges(cfg.plays),
         playTypeNote: '<strong>' + cfg.name + '</strong> — ' + cfg.note +
           '<br/><span style="font-size:.7rem;opacity:.8">Greyed-out options are not available for ' + cfg.name + '.</span>',
@@ -1250,16 +1697,16 @@
     }
 
     var EXTRA_GAME_TYPES = [
-      {
-        key:'regular_skins', icon:'💰', name:'Regular Skins',
-        plays:['Individual','1v1'],
-        note:'each hole is worth one skin and the outright low score wins it. Tied holes are simply pushed — there is no carry-over.',
-        vgDesc:'Shows per-hole skin winners, individual standings, and the total skins won by each player across 18 holes.',
-        playersDesc:'All players compete individually for one skin per hole.',
-        specific:'Each hole awards <strong>one skin</strong> to the outright low scorer. Tied holes are voided with <strong>no carry-over</strong>, so every hole is a fresh contest.',
-        asDesc:'Select Foursome → Foursome Settings → Tap Add Score → 18-Hole Grid → Scorecard → Skode & Junk → Skins Leaderboard → All Holes Done',
-        asNote:'Regular Skins awards one skin per hole to the outright low scorer. Tied holes are voided — no carry-over to the next hole.'
-      },
+//      {
+//        key:'regular_skins', icon:'💰', name:'Regular Skins',
+//        plays:['Individual','1v1'],
+//        note:'each hole is worth one skin and the outright low score wins it. Tied holes are simply pushed — there is no carry-over.',
+//        vgDesc:'Shows per-hole skin winners, individual standings, and the total skins won by each player across 18 holes.',
+//        playersDesc:'All players compete individually for one skin per hole.',
+//        specific:'Each hole awards <strong>one skin</strong> to the outright low scorer. Tied holes are voided with <strong>no carry-over</strong>, so every hole is a fresh contest.',
+//        asDesc:'Select Foursome → Foursome Settings → Tap Add Score → 18-Hole Grid → Scorecard → Skode & Junk → Skins Leaderboard → All Holes Done',
+//        asNote:'Regular Skins awards one skin per hole to the outright low scorer. Tied holes are voided — no carry-over to the next hole.'
+//      },
       {
         key:'ryder_cup', icon:'🏌️', name:'Ryder Cup',
         plays:['2v2','1v1'],
@@ -1418,6 +1865,40 @@
       const img7 = document.getElementById('addBetsScreenImg');
       if (img7) {
         img7.src = addBetsScreenImage;
+      }
+
+      //Show Results Screen
+      allPlayersResultImage = GT_DATA[currentGameType].img11;
+      // Update image
+      const img8 = document.getElementById('allPlayersResultImg');
+      if (img8) {
+        img8.src = allPlayersResultImage;
+      }
+      foursomeTabImage = GT_DATA[currentGameType].img12;
+      // Update image
+      const img9 = document.getElementById('foursomeTabImg');
+      if (img9) {
+        img9.src = foursomeTabImage;
+      }
+      foursomeScorecardImage = GT_DATA[currentGameType].img13;
+      // Update image
+      const img10 = document.getElementById('foursomeScorecardImg');
+      if (img10) {
+        img10.src = foursomeScorecardImage;
+      }
+      foursomeWinnersImage = GT_DATA[currentGameType].img14;
+      // Update image
+      const img11 = document.getElementById('foursomeWinnersImg');
+      if (img11) {
+        img11.src = foursomeWinnersImage;
+      }
+
+      //Show Leadger Screen
+      ledgerPageViewImage = GT_DATA[currentGameType].img15;
+      // Update image
+      const img12 = document.getElementById('ledgerPageViewImg');
+      if (img12) {
+        img12.src = ledgerPageViewImage;
       }
 
       // update Create Game dynamic content
