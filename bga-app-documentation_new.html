@@ -897,7 +897,7 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
           <div class="wsi-num">06</div>
           <div class="wsi-body">
             <div class="wsi-title">Game Created Successfully</div>
-            <div class="wsi-desc">
+            <div class="wsi-desc" id="gameCreateSuccessTitle">
               Once all game details are completed, your game will be successfully created.
               A confirmation screen will appear indicating that the game setup is complete.
             </div>
@@ -1507,6 +1507,18 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
                 <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px">
                   <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px">
                     <span style="background:var(--brand);color:#fff;font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase">Required</span>
+                    <span style="font-size:.88rem;font-weight:700;color:var(--ink)">Scoring by Scorekeeper Only</span>
+                  </div>
+                  <p style="font-size:.8rem;color:var(--ink-muted);line-height:1.6;margin:0">
+                    Enable this option to allow only the <strong>Organizer/Scorekeeper</strong> to enter scores during the game.
+                    When disabled, <strong>all players</strong> can enter their own scores.
+                    The default setting is <strong>On</strong>.
+                  </p>
+                </div>
+
+                <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px">
+                  <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px">
+                    <span style="background:var(--brand);color:#fff;font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase">Required</span>
                     <span style="font-size:.88rem;font-weight:700;color:var(--ink)">Play Type</span>
                   </div>
                   <p style="font-size:.8rem;color:var(--ink-muted);line-height:1.6;margin:0 0 8px">Select the play format. Available play types <strong>depend on the selected game type</strong> and will vary accordingly.</p>
@@ -1541,6 +1553,23 @@ h4.card-heading{font-size:.95rem;font-weight:700;color:var(--ink);margin:18px 0 
                     <br/><span style="font-size:.7rem;color:#3b82f6;opacity:.8">Greyed-out options above are not available for this game type.</span>
                   </div>-->
                 </div>
+
+              <!-- Ultra Vegas Switch -->
+                <div id="ultraVegasSwitch">
+                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px" >
+                    <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px">
+                      <span style="background:var(--brand);color:#fff;font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase">Required</span>
+                      <span style="font-size:.88rem;font-weight:700;color:var(--ink)">Ultra Vegas</span>
+                    </div>
+                    <p style="font-size:.8rem;color:var(--ink-muted);line-height:1.6;margin:0">
+                      The default setting is <strong>On</strong>. When enabled, the game will be created as
+                      <strong>Ultra Vegas</strong>, and both <strong>Score</strong> and <strong>Putts</strong>
+                      fields will be available during score entry. When disabled, the game will be created as
+                      <strong>Vegas</strong>, and only the <strong>Score</strong> field will be available.
+                    </p>
+                  </div>
+                </div>
+
 
               </div>
             </div>
